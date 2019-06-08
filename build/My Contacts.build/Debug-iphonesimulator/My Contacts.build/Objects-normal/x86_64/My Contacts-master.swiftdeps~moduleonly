@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "5411d683497db7afb6e54347cc7f2f84"
+build_time: [1559981518, 274546000]
+inputs:
+  "/Users/samarth/Desktop/My Contacts/My Contacts/ViewController.swift": [1559981512, 213427761]
+  "/Users/samarth/Desktop/My Contacts/My Contacts/AppDelegate.swift": [1559981512, 208950752]
