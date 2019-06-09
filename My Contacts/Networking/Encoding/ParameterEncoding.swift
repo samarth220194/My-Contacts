@@ -2,8 +2,8 @@
 //  ParameterEncoding.swift
 //  NetworkLayer
 //
-//  Created by Malcolm Kumwenda on 2018/03/05.
-//  Copyright © 2018 Malcolm Kumwenda. All rights reserved.
+//  Created by Samarth Kejriwal on 08/06/19.
+//  Copyright © 2019 Samarth Kejriwal. All rights reserved.
 //
 
 import Foundation

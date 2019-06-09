@@ -2,8 +2,8 @@
 //  NetworkManager.swift
 //  NetworkLayer
 //
-//  Created by Malcolm Kumwenda on 2018/03/11.
-//  Copyright © 2018 Malcolm Kumwenda. All rights reserved.
+//  Created by Samarth Kejriwal on 08/06/19.
+//  Copyright © 2019 Samarth Kejriwal. All rights reserved.
 //
 
 import Foundation
@@ -25,40 +25,57 @@ enum Result<String>{
 
 struct NetworkManager {
     static let environment : NetworkEnvironment = .production
-    static let MovieAPIKey = ""
-    let router = Router<MovieApi>()
+    let router = Router<ContactsApi>()
     
-    func getNewMovies(page: Int, completion: @escaping (_ movie: [Movie]?,_ error: String?)->()){
-        router.request(.newMovies(page: page)) { data, response, error in
-            
-            if error != nil {
-                completion(nil, "Please check your network connection.")
-            }
-            
-            if let response = response as? HTTPURLResponse {
-                let result = self.handleNetworkResponse(response)
-                switch result {
-                case .success:
-                    guard let responseData = data else {
-                        completion(nil, NetworkResponse.noData.rawValue)
-                        return
-                    }
-                    do {
-                        print(responseData)
-                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-                        print(jsonData)
-                        let apiResponse = try JSONDecoder().decode(MovieApiResponse.self, from: responseData)
-                        completion(apiResponse.movies,nil)
-                    }catch {
-                        print(error)
-                        completion(nil, NetworkResponse.unableToDecode.rawValue)
-                    }
-                case .failure(let networkFailureError):
-                    completion(nil, networkFailureError)
-                }
-            }
+
+    func getContacts(completion: @escaping (_ data: Data?,_ error: String?)->()){
+        router.request(.listContact) { data, response, error in
+            let response = self.handleData(data, response, error)
+            completion(response.0,response.1)
         }
     }
+    
+    func getContactDetails(id : Int,completion: @escaping (_ data: Data?,_ error: String?)->()){
+        router.request(.detailContact(id: id)) { data, response, error in
+            let response = self.handleData(data, response, error)
+            completion(response.0,response.1)
+        }
+    }
+    
+    func createContact(body : [String : Any],completion: @escaping (_ data: Data?,_ error: String?)->()) {
+        router.request(.createContact(body: body)) { data, response, error in
+            let response = self.handleData(data, response, error)
+            completion(response.0,response.1)
+        }
+    }
+    func updateContact(body : [String : Any],id : Int,completion: @escaping (_ data: Data?,_ error: String?)->()) {
+        router.request(.updateContact(id: id, body: body)) { data, response, error in
+            let response = self.handleData(data, response, error)
+            completion(response.0,response.1)
+        }
+    }
+    
+    func handleData(_ data: Data?,_ response: URLResponse?,_ error: Error?) -> (Data?, String?)
+    {
+        if error != nil {
+            return (nil,"Please check your network connection.")
+        }
+        if let response = response as? HTTPURLResponse {
+            let result = self.handleNetworkResponse(response)
+            switch result {
+            case .success:
+                guard let responseData = data else {
+                    return (nil,NetworkResponse.noData.rawValue)
+                }
+                return (responseData,nil)
+            case .failure(let networkFailureError):
+                return (nil,networkFailureError)
+            }
+        }
+        return (nil,nil)
+    }
+    
+    
     
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
         switch response.statusCode {

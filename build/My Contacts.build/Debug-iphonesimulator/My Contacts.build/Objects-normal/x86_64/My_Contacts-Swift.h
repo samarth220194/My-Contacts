@@ -166,6 +166,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreData;
+@import CoreGraphics;
+@import Foundation;
+@import MessageUI;
 @import UIKit;
 #endif
 
@@ -199,15 +203,134 @@ SWIFT_CLASS("_TtC11My_Contacts11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSEntityDescription;
+@class NSManagedObjectContext;
+
+SWIFT_CLASS_NAMED("Contact")
+@interface Contact : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface Contact (SWIFT_EXTENSION(My_Contacts))
+@property (nonatomic) int32_t contactId;
+@property (nonatomic, copy) NSString * _Nullable email;
+@property (nonatomic) BOOL favorite;
+@property (nonatomic, copy) NSString * _Nullable first_name;
+@property (nonatomic, copy) NSString * _Nullable last_name;
+@property (nonatomic, copy) NSString * _Nullable phone_number;
+@property (nonatomic, copy) NSString * _Nullable profile_pic;
+@property (nonatomic) BOOL syncStatus;
+@end
+
+@class UIView;
+@class UILabel;
+@class UIImageView;
 @class NSBundle;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC11My_Contacts14ViewController")
-@interface ViewController : UIViewController
+SWIFT_CLASS("_TtC11My_Contacts27ContactDetailViewController")
+@interface ContactDetailViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified detailView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified mobileNum;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified emailId;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified contactImage;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified contactName;
 - (void)viewDidLoad;
+- (IBAction)message:(id _Nonnull)sender;
+- (IBAction)call:(id _Nonnull)sender;
+- (IBAction)email:(id _Nonnull)sender;
+- (IBAction)markFavourite:(id _Nonnull)sender;
+- (IBAction)editContact:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+@class MFMailComposeViewController;
+
+@interface ContactDetailViewController (SWIFT_EXTENSION(My_Contacts)) <MFMailComposeViewControllerDelegate>
+- (void)mailComposeController:(MFMailComposeViewController * _Nonnull)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError * _Nullable)error;
+@end
+
+@class MFMessageComposeViewController;
+
+@interface ContactDetailViewController (SWIFT_EXTENSION(My_Contacts)) <MFMessageComposeViewControllerDelegate>
+- (void)messageComposeViewController:(MFMessageComposeViewController * _Nonnull)controller didFinishWithResult:(MessageComposeResult)result;
+@end
+
+
+SWIFT_CLASS("_TtC11My_Contacts15ContactListCell")
+@interface ContactListCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified contactImage;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified contactName;
+- (void)awakeFromNib;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
+
+SWIFT_CLASS("_TtC11My_Contacts26ContactsListViewController")
+@interface ContactsListViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified contactsList;
+- (void)viewDidLoad;
+- (IBAction)addNewContact:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface ContactsListViewController (SWIFT_EXTENSION(My_Contacts)) <UITableViewDataSource>
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+@interface ContactsListViewController (SWIFT_EXTENSION(My_Contacts)) <UITableViewDelegate>
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<NSString *> * _Nullable)sectionIndexTitlesForTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)tableView:(UITableView * _Nonnull)tableView titleForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITextField;
+@class UIButton;
+
+SWIFT_CLASS("_TtC11My_Contacts27CreateContactViewController")
+@interface CreateContactViewController : UIViewController <UINavigationControllerDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified firstName;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified lastName;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified mobileNum;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified emailId;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified contactImage;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified attachImage;
+- (void)viewDidLoad;
+- (void)dismissKeyboard;
+- (IBAction)pickImage:(id _Nonnull)sender;
+- (IBAction)cancelEdit:(id _Nonnull)sender;
+- (IBAction)createUpdateContact:(id _Nonnull)sender;
+- (void)keyboardDidShow;
+- (void)keyboardDidHide;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIImagePickerController;
+
+@interface CreateContactViewController (SWIFT_EXTENSION(My_Contacts)) <UIImagePickerControllerDelegate>
+- (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+@end
+
+
+@interface CreateContactViewController (SWIFT_EXTENSION(My_Contacts)) <UITextFieldDelegate>
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)textFieldShouldBeginEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

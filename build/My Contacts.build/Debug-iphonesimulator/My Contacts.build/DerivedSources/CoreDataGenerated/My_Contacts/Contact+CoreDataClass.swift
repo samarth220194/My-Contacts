@@ -2,7 +2,7 @@
 //  Contact+CoreDataClass.swift
 //  
 //
-//  Created by Samarth Kejriwal on 08/06/19.
+//  Created by Samarth Kejriwal on 09/06/19.
 //
 //  This file was automatically generated and should not be edited.
 //

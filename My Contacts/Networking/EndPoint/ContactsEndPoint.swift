@@ -15,20 +15,20 @@ enum NetworkEnvironment {
     case staging
 }
 
-public enum MovieApi {
-    case recommended(id:Int)
-    case popular(page:Int)
-    case newMovies(page:Int)
-    case video(id:Int)
+public enum ContactsApi {
+    case listContact
+    case detailContact(id:Int)
+    case createContact(body : [String : Any])
+    case updateContact(id:Int,body : [String : Any])
 }
 
-extension MovieApi: EndPointType {
+extension ContactsApi: EndPointType {
     
     var environmentBaseURL : String {
         switch NetworkManager.environment {
-        case .production: return "https://api.themoviedb.org/3/movie/"
-        case .qa: return "https://qa.themoviedb.org/3/movie/"
-        case .staging: return "https://staging.themoviedb.org/3/movie/"
+        case .production: return "http://gojek-contacts-app.herokuapp.com/"
+        case .qa: return "http://gojek-contacts-app.herokuapp.com/"
+        case .staging: return "http://gojek-contacts-app.herokuapp.com/"
         }
     }
     
@@ -39,30 +39,48 @@ extension MovieApi: EndPointType {
     
     var path: String {
         switch self {
-        case .recommended(let id):
-            return "\(id)/recommendations"
-        case .popular:
-            return "popular"
-        case .newMovies:
-            return "now_playing"
-        case .video(let id):
-            return "\(id)/videos"
+        case .listContact:
+            return "contacts.json"
+        case .createContact( _) :
+            return "contacts.json"
+        case .detailContact(let id):
+            return "contacts/\(id).json"
+        case .updateContact(let id, _) :
+            return "contacts/\(id).json"
         }
     }
     
     var httpMethod: HTTPMethod {
-        return .get
+        switch self {
+        case .listContact:
+            return .get
+        case .detailContact( _):
+            return .get
+        case .createContact:
+            return .post
+        case .updateContact( _):
+            return .put
+        }
     }
     
     var task: HTTPTask {
         switch self {
-        case .newMovies(let page):
+        case .listContact:
             return .requestParameters(bodyParameters: nil,
                                       bodyEncoding: .urlEncoding,
-                                      urlParameters: ["page":page,
-                                                      "api_key":NetworkManager.MovieAPIKey])
-        default:
-            return .request
+                                      urlParameters: [:])
+        case .detailContact( _) :
+            return .requestParameters(bodyParameters: nil,
+                                      bodyEncoding: .urlEncoding,
+                                      urlParameters: [:])
+        case .createContact(let body) :
+            return .requestParameters(bodyParameters: body,
+                                      bodyEncoding: .jsonEncoding,
+                                      urlParameters: [:])
+        case .updateContact( _,let body) :
+            return .requestParameters(bodyParameters: body,
+                                      bodyEncoding: .jsonEncoding,
+                                      urlParameters: [:])
         }
     }
     

@@ -7,14 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8331C95F87C21AB0EA47A33F /* Pods_My_Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489BA9115A48E74D1487CD68 /* Pods_My_Contacts.framework */; };
+		B218720350B540095AC643F3 /* Pods_My_ContactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399782DF70ECAFA4F16A54B7 /* Pods_My_ContactsTests.framework */; };
 		D432BCDD22ABA54800AAD12F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BCDC22ABA54800AAD12F /* AppDelegate.swift */; };
-		D432BCDF22ABA54800AAD12F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BCDE22ABA54800AAD12F /* ViewController.swift */; };
 		D432BCE222ABA54800AAD12F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D432BCE022ABA54800AAD12F /* Main.storyboard */; };
 		D432BCE522ABA54800AAD12F /* My_Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D432BCE322ABA54800AAD12F /* My_Contacts.xcdatamodeld */; };
 		D432BCE722ABA54A00AAD12F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D432BCE622ABA54A00AAD12F /* Assets.xcassets */; };
 		D432BCEA22ABA54A00AAD12F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D432BCE822ABA54A00AAD12F /* LaunchScreen.storyboard */; };
 		D432BCF522ABA54A00AAD12F /* My_ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BCF422ABA54A00AAD12F /* My_ContactsTests.swift */; };
 		D432BD0022ABA54A00AAD12F /* My_ContactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BCFF22ABA54A00AAD12F /* My_ContactsUITests.swift */; };
+		D432BD0E22ABB1C900AAD12F /* ContactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD0D22ABB1C900AAD12F /* ContactsListViewController.swift */; };
+		D432BD1122ABBE1400AAD12F /* EndPointTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD1022ABBE1400AAD12F /* EndPointTypeManager.swift */; };
+		D432BD1422ABBF2C00AAD12F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD1322ABBF2C00AAD12F /* Router.swift */; };
+		D432BD1822ABBF4900AAD12F /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD1522ABBF4900AAD12F /* NetworkLogger.swift */; };
+		D432BD1922ABBF4900AAD12F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD1622ABBF4900AAD12F /* HTTPMethod.swift */; };
+		D432BD1A22ABBF4900AAD12F /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD1722ABBF4900AAD12F /* HTTPTask.swift */; };
+		D432BD2E22ABBFB700AAD12F /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD2322ABBFB700AAD12F /* ParameterEncoding.swift */; };
+		D432BD2F22ABBFB700AAD12F /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD2422ABBFB700AAD12F /* URLParameterEncoding.swift */; };
+		D432BD3022ABBFB700AAD12F /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD2522ABBFB700AAD12F /* JSONParameterEncoder.swift */; };
+		D432BD3122ABBFB700AAD12F /* ContactsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD2722ABBFB700AAD12F /* ContactsEndPoint.swift */; };
+		D432BD3422ABBFF400AAD12F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD3322ABBFF400AAD12F /* NetworkManager.swift */; };
+		D432BD3722ABC04D00AAD12F /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD3622ABC04D00AAD12F /* Contacts.swift */; };
+		D432BD3C22ABC3EF00AAD12F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD3B22ABC3EF00AAD12F /* Extensions.swift */; };
+		D432BD3E22ABC40900AAD12F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD3D22ABC40900AAD12F /* Utils.swift */; };
+		D432BD4B22AC1D0D00AAD12F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD4A22AC1D0D00AAD12F /* Constants.swift */; };
+		D432BD4D22AC2E9C00AAD12F /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD4C22AC2E9C00AAD12F /* ContactDetailViewController.swift */; };
+		D432BD4F22AC492500AAD12F /* CreateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD4E22AC492500AAD12F /* CreateContactViewController.swift */; };
+		E2E8592D79F97888E796D73F /* Pods_My_ContactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6B7AB322AB857A367F9C96 /* Pods_My_ContactsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +54,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07EB5B58B39F8F86C49A254A /* Pods-My ContactsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ContactsUITests.release.xcconfig"; path = "Target Support Files/Pods-My ContactsUITests/Pods-My ContactsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		399782DF70ECAFA4F16A54B7 /* Pods_My_ContactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ContactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		489BA9115A48E74D1487CD68 /* Pods_My_Contacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Contacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DD1097C602237B4782B9756 /* Pods-My ContactsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ContactsUITests.debug.xcconfig"; path = "Target Support Files/Pods-My ContactsUITests/Pods-My ContactsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DB0B7D9AF359B0A2DBC66FF /* Pods-My Contacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Contacts.release.xcconfig"; path = "Target Support Files/Pods-My Contacts/Pods-My Contacts.release.xcconfig"; sourceTree = "<group>"; };
+		BC140E4F55CFD0DE20AF1299 /* Pods-My Contacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Contacts.debug.xcconfig"; path = "Target Support Files/Pods-My Contacts/Pods-My Contacts.debug.xcconfig"; sourceTree = "<group>"; };
 		D432BCD922ABA54800AAD12F /* My Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Contacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D432BCDC22ABA54800AAD12F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D432BCDE22ABA54800AAD12F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D432BCE122ABA54800AAD12F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D432BCE422ABA54800AAD12F /* My_Contacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Contacts.xcdatamodel; sourceTree = "<group>"; };
 		D432BCE622ABA54A00AAD12F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +73,26 @@
 		D432BCFB22ABA54A00AAD12F /* My ContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My ContactsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D432BCFF22ABA54A00AAD12F /* My_ContactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_ContactsUITests.swift; sourceTree = "<group>"; };
 		D432BD0122ABA54A00AAD12F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D432BD0D22ABB1C900AAD12F /* ContactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListViewController.swift; sourceTree = "<group>"; };
+		D432BD1022ABBE1400AAD12F /* EndPointTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTypeManager.swift; sourceTree = "<group>"; };
+		D432BD1322ABBF2C00AAD12F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D432BD1522ABBF4900AAD12F /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		D432BD1622ABBF4900AAD12F /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D432BD1722ABBF4900AAD12F /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		D432BD2322ABBFB700AAD12F /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		D432BD2422ABBFB700AAD12F /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		D432BD2522ABBFB700AAD12F /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		D432BD2722ABBFB700AAD12F /* ContactsEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsEndPoint.swift; sourceTree = "<group>"; };
+		D432BD3322ABBFF400AAD12F /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D432BD3622ABC04D00AAD12F /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		D432BD3B22ABC3EF00AAD12F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D432BD3D22ABC40900AAD12F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D432BD4A22AC1D0D00AAD12F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D432BD4C22AC2E9C00AAD12F /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		D432BD4E22AC492500AAD12F /* CreateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactViewController.swift; sourceTree = "<group>"; };
+		E35980BE86C37A2A5312AC2F /* Pods-My ContactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ContactsTests.release.xcconfig"; path = "Target Support Files/Pods-My ContactsTests/Pods-My ContactsTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED6B7AB322AB857A367F9C96 /* Pods_My_ContactsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_ContactsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27068F3BB1C48814E324EF2 /* Pods-My ContactsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ContactsTests.debug.xcconfig"; path = "Target Support Files/Pods-My ContactsTests/Pods-My ContactsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8331C95F87C21AB0EA47A33F /* Pods_My_Contacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B218720350B540095AC643F3 /* Pods_My_ContactsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +116,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E8592D79F97888E796D73F /* Pods_My_ContactsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		135BAEF7C0D5C13DC8C33155 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC140E4F55CFD0DE20AF1299 /* Pods-My Contacts.debug.xcconfig */,
+				7DB0B7D9AF359B0A2DBC66FF /* Pods-My Contacts.release.xcconfig */,
+				F27068F3BB1C48814E324EF2 /* Pods-My ContactsTests.debug.xcconfig */,
+				E35980BE86C37A2A5312AC2F /* Pods-My ContactsTests.release.xcconfig */,
+				6DD1097C602237B4782B9756 /* Pods-My ContactsUITests.debug.xcconfig */,
+				07EB5B58B39F8F86C49A254A /* Pods-My ContactsUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A3912EC549395DC6AB23B174 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				489BA9115A48E74D1487CD68 /* Pods_My_Contacts.framework */,
+				399782DF70ECAFA4F16A54B7 /* Pods_My_ContactsTests.framework */,
+				ED6B7AB322AB857A367F9C96 /* Pods_My_ContactsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D432BCD022ABA54800AAD12F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +153,8 @@
 				D432BCF322ABA54A00AAD12F /* My ContactsTests */,
 				D432BCFE22ABA54A00AAD12F /* My ContactsUITests */,
 				D432BCDA22ABA54800AAD12F /* Products */,
+				135BAEF7C0D5C13DC8C33155 /* Pods */,
+				A3912EC549395DC6AB23B174 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +171,14 @@
 		D432BCDB22ABA54800AAD12F /* My Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				D432BCDC22ABA54800AAD12F /* AppDelegate.swift */,
-				D432BCDE22ABA54800AAD12F /* ViewController.swift */,
-				D432BCE022ABA54800AAD12F /* Main.storyboard */,
+				D432BD3A22ABC3DF00AAD12F /* Helpers */,
+				D432BD3822ABC37800AAD12F /* Application */,
 				D432BCE622ABA54A00AAD12F /* Assets.xcassets */,
-				D432BCE822ABA54A00AAD12F /* LaunchScreen.storyboard */,
 				D432BCEB22ABA54A00AAD12F /* Info.plist */,
-				D432BCE322ABA54800AAD12F /* My_Contacts.xcdatamodeld */,
+				D432BCE022ABA54800AAD12F /* Main.storyboard */,
+				D432BD3522ABC03500AAD12F /* Model */,
+				D432BD0F22ABBDAB00AAD12F /* Networking */,
+				D432BD3922ABC39C00AAD12F /* ViewController */,
 			);
 			path = "My Contacts";
 			sourceTree = "<group>";
@@ -128,6 +201,93 @@
 			path = "My ContactsUITests";
 			sourceTree = "<group>";
 		};
+		D432BD0F22ABBDAB00AAD12F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D432BD2222ABBFB700AAD12F /* Encoding */,
+				D432BD3222ABBFF400AAD12F /* Manager */,
+				D432BD2622ABBFB700AAD12F /* EndPoint */,
+				D432BD1222ABBEAB00AAD12F /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D432BD1222ABBEAB00AAD12F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D432BD1022ABBE1400AAD12F /* EndPointTypeManager.swift */,
+				D432BD1622ABBF4900AAD12F /* HTTPMethod.swift */,
+				D432BD1722ABBF4900AAD12F /* HTTPTask.swift */,
+				D432BD1522ABBF4900AAD12F /* NetworkLogger.swift */,
+				D432BD1322ABBF2C00AAD12F /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D432BD2222ABBFB700AAD12F /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				D432BD2322ABBFB700AAD12F /* ParameterEncoding.swift */,
+				D432BD2422ABBFB700AAD12F /* URLParameterEncoding.swift */,
+				D432BD2522ABBFB700AAD12F /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		D432BD2622ABBFB700AAD12F /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				D432BD2722ABBFB700AAD12F /* ContactsEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		D432BD3222ABBFF400AAD12F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D432BD3322ABBFF400AAD12F /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		D432BD3522ABC03500AAD12F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D432BCE322ABA54800AAD12F /* My_Contacts.xcdatamodeld */,
+				D432BD3622ABC04D00AAD12F /* Contacts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D432BD3822ABC37800AAD12F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D432BCDC22ABA54800AAD12F /* AppDelegate.swift */,
+				D432BCE822ABA54A00AAD12F /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D432BD3922ABC39C00AAD12F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D432BD0D22ABB1C900AAD12F /* ContactsListViewController.swift */,
+				D432BD4E22AC492500AAD12F /* CreateContactViewController.swift */,
+				D432BD4C22AC2E9C00AAD12F /* ContactDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D432BD3A22ABC3DF00AAD12F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D432BD3B22ABC3EF00AAD12F /* Extensions.swift */,
+				D432BD3D22ABC40900AAD12F /* Utils.swift */,
+				D432BD4A22AC1D0D00AAD12F /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +295,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D432BD0422ABA54A00AAD12F /* Build configuration list for PBXNativeTarget "My Contacts" */;
 			buildPhases = (
+				1D727B71320B9FD10B056382 /* [CP] Check Pods Manifest.lock */,
 				D432BCD522ABA54800AAD12F /* Sources */,
 				D432BCD622ABA54800AAD12F /* Frameworks */,
 				D432BCD722ABA54800AAD12F /* Resources */,
+				DCF67585E3AA561C53293318 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +314,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D432BD0722ABA54A00AAD12F /* Build configuration list for PBXNativeTarget "My ContactsTests" */;
 			buildPhases = (
+				5EA4247A52B709A550D95FEB /* [CP] Check Pods Manifest.lock */,
 				D432BCEC22ABA54A00AAD12F /* Sources */,
 				D432BCED22ABA54A00AAD12F /* Frameworks */,
 				D432BCEE22ABA54A00AAD12F /* Resources */,
@@ -170,6 +333,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D432BD0A22ABA54A00AAD12F /* Build configuration list for PBXNativeTarget "My ContactsUITests" */;
 			buildPhases = (
+				F823BEAFD89241F6D48DA6C3 /* [CP] Check Pods Manifest.lock */,
 				D432BCF722ABA54A00AAD12F /* Sources */,
 				D432BCF822ABA54A00AAD12F /* Frameworks */,
 				D432BCF922ABA54A00AAD12F /* Resources */,
@@ -254,14 +418,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D727B71320B9FD10B056382 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My Contacts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EA4247A52B709A550D95FEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My ContactsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCF67585E3AA561C53293318 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My Contacts/Pods-My Contacts-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-My Contacts/Pods-My Contacts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F823BEAFD89241F6D48DA6C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My ContactsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D432BCD522ABA54800AAD12F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D432BCDF22ABA54800AAD12F /* ViewController.swift in Sources */,
+				D432BD2F22ABBFB700AAD12F /* URLParameterEncoding.swift in Sources */,
+				D432BD4B22AC1D0D00AAD12F /* Constants.swift in Sources */,
+				D432BD1822ABBF4900AAD12F /* NetworkLogger.swift in Sources */,
+				D432BD0E22ABB1C900AAD12F /* ContactsListViewController.swift in Sources */,
+				D432BD4D22AC2E9C00AAD12F /* ContactDetailViewController.swift in Sources */,
+				D432BD3422ABBFF400AAD12F /* NetworkManager.swift in Sources */,
+				D432BD1922ABBF4900AAD12F /* HTTPMethod.swift in Sources */,
 				D432BCE522ABA54800AAD12F /* My_Contacts.xcdatamodeld in Sources */,
+				D432BD3722ABC04D00AAD12F /* Contacts.swift in Sources */,
+				D432BD3E22ABC40900AAD12F /* Utils.swift in Sources */,
+				D432BD1A22ABBF4900AAD12F /* HTTPTask.swift in Sources */,
+				D432BD1422ABBF2C00AAD12F /* Router.swift in Sources */,
+				D432BD1122ABBE1400AAD12F /* EndPointTypeManager.swift in Sources */,
+				D432BD3C22ABC3EF00AAD12F /* Extensions.swift in Sources */,
+				D432BD2E22ABBFB700AAD12F /* ParameterEncoding.swift in Sources */,
+				D432BD3022ABBFB700AAD12F /* JSONParameterEncoder.swift in Sources */,
 				D432BCDD22ABA54800AAD12F /* AppDelegate.swift in Sources */,
+				D432BD4F22AC492500AAD12F /* CreateContactViewController.swift in Sources */,
+				D432BD3122ABBFB700AAD12F /* ContactsEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +705,7 @@
 		};
 		D432BD0522ABA54A00AAD12F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC140E4F55CFD0DE20AF1299 /* Pods-My Contacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +724,7 @@
 		};
 		D432BD0622ABA54A00AAD12F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DB0B7D9AF359B0A2DBC66FF /* Pods-My Contacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +743,7 @@
 		};
 		D432BD0822ABA54A00AAD12F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F27068F3BB1C48814E324EF2 /* Pods-My ContactsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +765,7 @@
 		};
 		D432BD0922ABA54A00AAD12F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E35980BE86C37A2A5312AC2F /* Pods-My ContactsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +787,7 @@
 		};
 		D432BD0B22ABA54A00AAD12F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DD1097C602237B4782B9756 /* Pods-My ContactsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +808,7 @@
 		};
 		D432BD0C22ABA54A00AAD12F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07EB5B58B39F8F86C49A254A /* Pods-My ContactsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
