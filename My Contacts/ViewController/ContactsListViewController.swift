@@ -8,30 +8,29 @@
 
 import UIKit
 import Kingfisher
+import CoreData
+import Reachability
 
 class ContactListCell : UITableViewCell
 {
     @IBOutlet weak var contactImage: UIImageView!
     @IBOutlet weak var contactName: UILabel!
     
-    var link: ContactsListViewController?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         let favoriteBtn = UIButton()
+        contactImage.addCornerRadius(radius: self.contactImage.frame.width/2)
         favoriteBtn.frame = CGRect(x: 0, y: 0, width: 45, height: 45)
         favoriteBtn.setImage(UIImage(named: "home_favourite"), for: .normal)
         accessoryView = favoriteBtn
         accessoryView?.isHidden = true
     }
-
     func setData(contact_img : String, contact_name : String,isFavourite : Bool)
     {
         contactName.text = contact_name
         accessoryView?.isHidden = isFavourite == true ? false : true
-        let imgUrl = Constants.baseUrl.appending(contact_img)
-        guard let contactUrl = URL(string: imgUrl) else {return}
-        contactImage.kf.setImage(with: contactUrl)
+        guard let contactUrl = URL(string: contact_img) else {return}
+        contactImage.kf.setImage(with: contactUrl, placeholder: UIImage(named: "placeholder_photo"))
     }
 }
 
@@ -39,36 +38,70 @@ class ContactListCell : UITableViewCell
 class ContactsListViewController: UIViewController {
 
     @IBOutlet weak var contactsList: UITableView!
+    @IBOutlet weak var syncView: UIView!
+    @IBOutlet weak var syncViewHt: NSLayoutConstraint!
     
     var networkManager: NetworkManager!
+    var contacts : [NSManagedObject] = []
     var loader = UIView()
     var contactsDictionary = [String : [ContactsAPIResponse]]()
     var contactTitles = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       setViews()
-        getContacts()
+        networkManager = NetworkManager()
+        setViews()
+        if (NetworkConnection.sharedInstance.reachability).connection != .none
+        {
+            getContacts()
+        }
+        else
+        {
+            getOfflineContacts()
+        }
     }
-    func setViews()
-    {
-        contactsList.sectionIndexColor = UIColor(displayP3Red: 80/255, green: 227/255, blue: 194/255, alpha: 1)
-        loader = UIUtils.createLoader(vc: self)
-        self.view.addSubview(loader)
-        self.loader.isHidden = true
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // if contacts are present offline, then list them otherwise get the contacts from server
+        if CoreDataManager.sharedManager.fetchAllContacts()?.count != 0
+        {
+            getOfflineContacts()
+        }
+        else
+        {
+            getContacts()
+        }
+        
+        
+        
+        let unsynced_contacts = CoreDataManager.sharedManager.fetchUnsysncContacts() ?? []
+        if unsynced_contacts.count != 0
+        {
+            self.syncView.isHidden = false
+            self.syncViewHt.constant = 45
+            self.syncContacts(contacts : unsynced_contacts,index : 0)
+        }
+        else
+        {
+            self.syncView.isHidden = true
+            self.syncViewHt.constant = 0
+        }
     }
     
     func getContacts()
     {
         loader.isHidden = false
         networkManager = NetworkManager()
-       
         networkManager.getContacts(){ data,error in
             if error == nil {
                 self.parseData(data)
             }
             else {
-                UIUtils().show_Alert(self, title_string: "Error", message_string: error ?? "")
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else {return}
+                    UIUtils().show_Alert(self, title_string: "Error", message_string: error ?? "")
+                }
             }
         }
     }
@@ -78,25 +111,181 @@ class ContactsListViewController: UIViewController {
         {
             do {
                 let apiResponse = try JSONDecoder().decode([ContactsAPIResponse].self, from: data!)
-                self.contactsDictionary = Dictionary(grouping: apiResponse, by: { (element: ContactsAPIResponse) in
-                    let letter = Character(String((element.firstName ?? "").prefix(1).uppercased()))
-                    if letter.ascii! < UInt32(65) || letter.ascii! >  UInt32(90)
-                    {
-                        return "#"
-                    }
-                    return (element.firstName ?? "").prefix(1).uppercased()
-                })
-                self.contactTitles = Array(contactsDictionary.keys).sorted(by : <)
-                
+                self.getSectionedData(contacts: apiResponse)
+                self.saveContacts(contactList : apiResponse)
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else {return}
                     self.loader.isHidden = true
                     self.contactsList.reloadData()
                 }
             }catch {
-                UIUtils().show_Alert(self, title_string: "Error", message_string: error.localizedDescription)
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else {return}
+                    UIUtils().show_Alert(self, title_string: "Error", message_string: error.localizedDescription)
+                }
                 print(error)
             }
+        }
+    }
+    
+    
+    
+    func syncContacts(contacts : [Contact],index : Int)
+    {
+        // Recursively syncing the contacts with server
+        if index == contacts.count
+        {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {return}
+                self.syncView.isHidden = true
+                self.syncViewHt.constant = 0
+            }
+        }
+        else
+        {
+            let postBody = ["first_name" : (contacts[index].value(forKey: "first_name") as? String) ?? "",
+                            "last_name" : (contacts[index].value(forKey: "last_name") as? String) ?? "",
+                            "email" :  (contacts[index].value(forKey: "email") as? String) ?? "",
+                            "phone_number" : (contacts[index].value(forKey: "phone_number") as? String) ?? "",
+                            "favorite" : (contacts[index].value(forKey: "favorite") as? Bool) ?? false,
+                            "profile_pic" : (contacts[index].value(forKey: "profile_pic") as? String) ?? ""] as [String : Any]
+            
+            if contacts[index].value(forKey: "contactId") as? Int != nil    // update Contact (PUT api)
+            {
+                networkManager.updateContact(body: postBody,id : (contacts[index].value(forKey: "contactId") as? Int) ?? 0){ data,error in
+                    if error == nil {
+                        self.parseData(data) { contactResponse in
+                            if contactResponse != nil
+                            {
+                                CoreDataManager.sharedManager.syncContact(contact: contacts[index], id: contactResponse?.id ?? 0)
+                                self.syncContacts(contacts: contacts, index: index + 1)
+                            }
+                            else
+                            {
+                                self.syncContacts(contacts: contacts, index: index + 1)
+                            }
+                        }
+                    }
+                    else
+                    {
+                        self.syncContacts(contacts: contacts, index: index + 1)
+                    }
+                }
+            }
+            else // create Contact (POST api)
+            {
+                networkManager.createContact(body: postBody){ data,error in
+                    if error == nil {
+                        self.parseData(data) { contactResponse in
+                            if contactResponse != nil
+                            {
+                                CoreDataManager.sharedManager.syncContact(contact: contacts[index], id: contactResponse?.id ?? 0)
+                                self.syncContacts(contacts: contacts, index: index + 1)
+                            }
+                            else
+                            {
+                                self.syncContacts(contacts: contacts, index: index + 1)
+                            }
+                        }
+                    }
+                    else
+                    {
+                        self.syncContacts(contacts: contacts, index: index + 1)
+                    }
+                }
+            }
+        }
+    }
+    func parseData(_ data : Data?, _ completion : @escaping (ContactsAPIResponse?) -> ())
+    {
+        if data != nil
+        {
+            do {
+                let apiResponse = try JSONDecoder().decode(ContactsAPIResponse.self, from: data!)
+                completion(apiResponse)
+            }catch {
+                completion(nil)
+                print(error)
+            }
+        }
+        else
+        {
+            completion(nil)
+        }
+    }
+    
+    func setViews()
+    {
+        contactsList.tableFooterView = UIView()
+        contactsList.sectionIndexColor = UIColor(displayP3Red: 80/255, green: 227/255, blue: 194/255, alpha: 1)
+        loader = UIUtils.createLoader(vc: self)
+        self.view.addSubview(loader)
+        self.loader.isHidden = true
+    }
+    
+    
+    
+    func getSectionedData(contacts : [ContactsAPIResponse])
+    {
+        self.contactsDictionary = Dictionary(grouping: contacts, by: { (element: ContactsAPIResponse) in
+            let letter = Character(String((element.firstName ?? "").prefix(1).uppercased()))
+            if letter.ascii! < UInt32(65) || letter.ascii! >  UInt32(90)
+            {
+                return "#"
+            }
+            return (element.firstName ?? "").prefix(1).uppercased()
+        })
+        self.contactTitles = Array(contactsDictionary.keys).sorted(by : <)
+    }
+    
+    func saveContacts(contactList : [ContactsAPIResponse])
+    {
+        let dispatchQueue = DispatchQueue(label: "QueueIdentification", qos: .background)
+        dispatchQueue.async { [weak self] in
+            CoreDataManager.sharedManager.deleteAllContacts()
+            for contact in contactList
+            {
+                CoreDataManager.sharedManager.insertContact(id: contact.id ?? 0, firstName: contact.firstName ?? "", lastName: contact.lastName ?? "", emaild: contact.email ?? "", isFavorite: contact.favorite ?? false, phoneNum: contact.phoneNumber ?? "", profilePic: contact.profilePic ?? "", sync: true)
+            }
+      }
+//        DispatchQueue.main.async { [weak self] in
+//            guard let self = self else {return}
+//            CoreDataManager.sharedManager.deleteAllContacts()
+//            for contact in contactList
+//            {
+//                CoreDataManager.sharedManager.insertContact(id: contact.id ?? 0, firstName: contact.firstName ?? "", lastName: contact.lastName ?? "", emaild: contact.email ?? "", isFavorite: contact.favorite ?? false, phoneNum: contact.phoneNumber ?? "", profilePic: contact.profilePic ?? "", sync: true)
+//            }
+//        }
+//        let group = DispatchGroup()
+//        for contact in contactList
+//        {
+//            group.enter()
+//            let dispatchQueue = DispatchQueue(label: String(contact.id ?? 0) , qos: .background)
+//            dispatchQueue.async(group: group,  execute:{
+//                CoreDataManager.sharedManager.insertContact(id: contact.id ?? 0, firstName: contact.firstName ?? "", lastName: contact.lastName ?? "", emaild: contact.email ?? "", isFavorite: contact.favorite ?? false, phoneNum: contact.phoneNumber ?? "", profilePic: contact.profilePic ?? "", sync: true)
+//            })
+//            group.leave()
+//        }
+//        group.notify(queue: DispatchQueue.main, execute:{
+//            print("All task finished!")
+//        })
+        
+    }
+    func getOfflineContacts()
+    {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {return}
+            self.loader.isHidden = true
+            self.contacts = CoreDataManager.sharedManager.fetchAllContacts() ?? []
+            print(self.contacts.count)
+            var localContacts = [ContactsAPIResponse]()
+            for contact in self.contacts
+            {
+                let local_contact = ContactsAPIResponse(id: contact.value(forKey: "contactId") as! Int, firstName: contact.value(forKey: "first_name") as! String, lastName: contact.value(forKey: "last_name") as! String, profilePic: contact.value(forKey: "profile_pic") as! String, favorite: contact.value(forKey: "favorite") as! Bool, url: "", email: contact.value(forKey: "email") as! String, phoneNumber: contact.value(forKey: "phone_number") as! String, createdAt: "", updatedAt: "")
+                localContacts.append(local_contact)
+            }
+            self.getSectionedData(contacts: localContacts)
+            self.contactsList.reloadData()
         }
     }
     

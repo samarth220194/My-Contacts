@@ -35,6 +35,19 @@ struct ContactsAPIResponse: Codable {
         case updatedAt = "updated_at"
     }
     
+    init(id : Int,firstName : String,lastName : String,profilePic : String,favorite : Bool,url : String,email : String,phoneNumber : String,createdAt : String,updatedAt : String) {
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
+        self.profilePic = profilePic
+        self.favorite = favorite
+        self.url = url
+        self.email = email
+        self.phoneNumber = phoneNumber
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         do {

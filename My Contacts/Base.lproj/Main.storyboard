@@ -18,8 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-4w-Jlb">
+                                <rect key="frame" x="0.0" y="64" width="414" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Syncing contacts with server" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iv-e7-620">
+                                        <rect key="frame" x="16" y="0.0" width="382" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="8iv-e7-620" firstAttribute="centerX" secondItem="YI5-4w-Jlb" secondAttribute="centerX" id="0vT-Hy-FPh"/>
+                                    <constraint firstItem="8iv-e7-620" firstAttribute="top" secondItem="YI5-4w-Jlb" secondAttribute="top" id="2xS-zo-Hfy"/>
+                                    <constraint firstAttribute="trailing" secondItem="8iv-e7-620" secondAttribute="trailing" constant="16" id="MNZ-Yc-Qxp"/>
+                                    <constraint firstAttribute="bottom" secondItem="8iv-e7-620" secondAttribute="bottom" id="TfE-Vq-3FA"/>
+                                    <constraint firstAttribute="height" constant="45" id="dwE-9z-CAj"/>
+                                    <constraint firstItem="8iv-e7-620" firstAttribute="leading" secondItem="YI5-4w-Jlb" secondAttribute="leading" constant="16" id="uS6-Zt-t69"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qey-jI-02X">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="contact_cell" rowHeight="64" id="WTR-Hs-OMD" customClass="ContactListCell" customModule="My_Contacts" customModuleProvider="target">
@@ -68,9 +88,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qey-jI-02X" secondAttribute="trailing" id="AZ5-40-hor"/>
-                            <constraint firstItem="Qey-jI-02X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HU1-DW-ame"/>
+                            <constraint firstItem="YI5-4w-Jlb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TLb-Ba-Y01"/>
+                            <constraint firstItem="Qey-jI-02X" firstAttribute="top" secondItem="YI5-4w-Jlb" secondAttribute="bottom" id="ZB0-7y-PBL"/>
+                            <constraint firstItem="YI5-4w-Jlb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cgk-oh-7y5"/>
                             <constraint firstItem="Qey-jI-02X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cvf-nb-aZS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qey-jI-02X" secondAttribute="bottom" id="hZ7-oC-180"/>
+                            <constraint firstItem="YI5-4w-Jlb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iCP-Xp-UNV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -87,6 +110,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contactsList" destination="Qey-jI-02X" id="aLT-y6-sYS"/>
+                        <outlet property="syncView" destination="YI5-4w-Jlb" id="yfz-nr-oHa"/>
+                        <outlet property="syncViewHt" destination="dwE-9z-CAj" id="CA1-V3-Uff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,7 +140,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlW-qd-TFQ">
-                                                <rect key="frame" x="16" y="143" width="382" height="24.666666666666657"/>
+                                                <rect key="frame" x="16" y="143" width="382" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -130,7 +155,7 @@
                                                     <action selector="message:" destination="ivA-n1-giR" eventType="touchUpInside" id="A07-YJ-IUI"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-f9-XRD">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-f9-XRD">
                                                 <rect key="frame" x="44.000000000000007" y="261" width="81.666666666666686" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
@@ -146,7 +171,7 @@
                                                     <action selector="call:" destination="ivA-n1-giR" eventType="touchUpInside" id="1Jd-IP-CtE"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyP-e1-y6J">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="MyP-e1-y6J">
                                                 <rect key="frame" x="125.66666666666669" y="261" width="81.333333333333314" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -162,7 +187,7 @@
                                                     <action selector="email:" destination="ivA-n1-giR" eventType="touchUpInside" id="MJD-fr-dZD"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rre-vu-jx7">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="rre-vu-jx7">
                                                 <rect key="frame" x="207" y="261" width="81.666666666666686" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -178,7 +203,7 @@
                                                     <action selector="markFavourite:" destination="ivA-n1-giR" eventType="touchUpInside" id="u91-Kd-Q9a"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBD-vi-izk">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="aBD-vi-izk">
                                                 <rect key="frame" x="288.66666666666669" y="261" width="81.333333333333314" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -210,7 +235,6 @@
                                             <constraint firstItem="TZI-f9-XRD" firstAttribute="trailing" secondItem="AU2-46-xFf" secondAttribute="trailing" id="h8Z-Yv-6O6"/>
                                             <constraint firstItem="9zM-vu-g3P" firstAttribute="centerX" secondItem="c3i-RT-ZjS" secondAttribute="centerX" id="hGr-mI-bYs"/>
                                             <constraint firstAttribute="trailing" secondItem="dlW-qd-TFQ" secondAttribute="trailing" constant="16" id="iPm-aW-VqW"/>
-                                            <constraint firstItem="AU2-46-xFf" firstAttribute="top" secondItem="dlW-qd-TFQ" secondAttribute="bottom" constant="12" id="j8T-li-NRb"/>
                                             <constraint firstItem="aBD-vi-izk" firstAttribute="leading" secondItem="Vm7-lA-GcJ" secondAttribute="leading" id="jyF-uT-3kJ"/>
                                             <constraint firstItem="wd7-JD-7sZ" firstAttribute="width" secondItem="EIJ-zN-ByK" secondAttribute="width" id="kZv-F5-OcF"/>
                                             <constraint firstItem="Vm7-lA-GcJ" firstAttribute="leading" secondItem="wd7-JD-7sZ" secondAttribute="trailing" id="mIL-qe-fvy"/>
@@ -338,6 +362,7 @@
                         <outlet property="contactName" destination="dlW-qd-TFQ" id="m5I-1M-mFX"/>
                         <outlet property="detailView" destination="c3i-RT-ZjS" id="GsU-95-So8"/>
                         <outlet property="emailId" destination="5CI-tN-vxZ" id="GrL-xd-Oet"/>
+                        <outlet property="favouriteButton" destination="Vm7-lA-GcJ" id="mKl-ph-2u4"/>
                         <outlet property="mobileNum" destination="NIi-X5-VPR" id="5Pu-vH-rIn"/>
                     </connections>
                 </viewController>

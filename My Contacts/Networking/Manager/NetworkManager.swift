@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 enum NetworkResponse:String {
     case success
     case authenticationError = "You need to be authenticated first."

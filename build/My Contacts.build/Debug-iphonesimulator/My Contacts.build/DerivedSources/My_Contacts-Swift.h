@@ -170,6 +170,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreGraphics;
 @import Foundation;
 @import MessageUI;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -226,6 +227,7 @@ SWIFT_CLASS_NAMED("Contact")
 @class UIView;
 @class UILabel;
 @class UIImageView;
+@class UIButton;
 @class NSBundle;
 @class NSCoder;
 
@@ -236,6 +238,7 @@ SWIFT_CLASS("_TtC11My_Contacts27ContactDetailViewController")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified emailId;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified contactImage;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified contactName;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified favouriteButton;
 - (void)viewDidLoad;
 - (IBAction)message:(id _Nonnull)sender;
 - (IBAction)call:(id _Nonnull)sender;
@@ -273,7 +276,9 @@ SWIFT_CLASS("_TtC11My_Contacts15ContactListCell")
 SWIFT_CLASS("_TtC11My_Contacts26ContactsListViewController")
 @interface ContactsListViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified contactsList;
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified syncView;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (IBAction)addNewContact:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -296,7 +301,6 @@ SWIFT_CLASS("_TtC11My_Contacts26ContactsListViewController")
 @end
 
 @class UITextField;
-@class UIButton;
 
 SWIFT_CLASS("_TtC11My_Contacts27CreateContactViewController")
 @interface CreateContactViewController : UIViewController <UINavigationControllerDelegate>
@@ -328,6 +332,13 @@ SWIFT_CLASS("_TtC11My_Contacts27CreateContactViewController")
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)textFieldShouldBeginEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC11My_Contacts17NetworkConnection")
+@interface NetworkConnection : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)networkStatusChanged:(NSNotification * _Nonnull)notification;
 @end
 
 
