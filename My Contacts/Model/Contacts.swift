@@ -16,7 +16,8 @@ struct ContactsSection {
 
 struct ContactsAPIResponse: Codable {
     let id: Int?
-    let firstName, lastName, profilePic: String?
+    let firstName, lastName : String?
+    var profilePic : String?
     let favorite: Bool?
     let url: String?
     let email : String?
@@ -35,7 +36,7 @@ struct ContactsAPIResponse: Codable {
         case updatedAt = "updated_at"
     }
     
-    init(id : Int,firstName : String,lastName : String,profilePic : String,favorite : Bool,url : String,email : String,phoneNumber : String,createdAt : String,updatedAt : String) {
+    init(id : Int?,firstName : String,lastName : String,profilePic : String,favorite : Bool,url : String,email : String,phoneNumber : String,createdAt : String,updatedAt : String) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName

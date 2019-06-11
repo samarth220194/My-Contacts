@@ -8,166 +8,349 @@
 
 import Foundation
 import CoreData
+import UIKit
 
-class CoreDataManager {
+
+final class CoreDataStack {
+   
+    public let modelName: String
     
-    static let sharedManager = CoreDataManager()
-    private init() {}
+    init(modelName: String) {
+        self.modelName = modelName
+    }
     
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "My_Contacts")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
+    private func setupNotificationHandling() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(saveChanges), name: UIApplication.willTerminateNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(saveChanges), name: UIApplication.didEnterBackgroundNotification, object: nil)
+    }
+
+    private(set) lazy var managedObjectContext: NSManagedObjectContext = {
+        let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+       
+        managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator
+        
+//        managedObjectContext.parent = self.privateManagedObjectContext
+        
+        return managedObjectContext
     }()
     
-    func saveContext() {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        if context.hasChanges {
+    private lazy var privateManagedObjectContext: NSManagedObjectContext = {
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        
+        // Configure Managed Object Context
+//        managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator
+        
+        managedObjectContext.parent = self.managedObjectContext
+        
+        return managedObjectContext
+    }()
+    
+    
+    private lazy var managedObjectModel: NSManagedObjectModel = {
+        guard let modelURL = Bundle.main.url(forResource: self.modelName, withExtension: "momd") else {
+            fatalError("Unable to Find Data Model")
+        }
+        
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
+            fatalError("Unable to Load Data Model")
+        }
+        
+        return managedObjectModel
+    }()
+    
+    private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        
+        let fileManager = FileManager.default
+        let storeName = "\(self.modelName).sqlite"
+        
+        let documentsDirectoryURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        
+        let persistentStoreURL = documentsDirectoryURL.appendingPathComponent(storeName)
+        
+        do {
+//            let options = [ NSInferMappingModelAutomaticallyOption : true,
+//                            NSMigratePersistentStoresAutomaticallyOption : true]
+//
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType,
+                                                              configurationName: nil,
+                                                              at: persistentStoreURL,
+                                                              options: nil)
+        } catch {
+            fatalError("Unable to Load Persistent Store")
+        }
+        
+        return coordinator
+    }()
+    
+    @objc func saveChanges() {
+        privateManagedObjectContext.perform {
             do {
-                try context.save()
+                if self.privateManagedObjectContext.hasChanges {
+                    try self.privateManagedObjectContext.save()
+                }
             } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                let saveError = error as NSError
+                print("Unable to Save Changes of Managed Object Context")
+                print("\(saveError), \(saveError.localizedDescription)")
+            }
+            if let parent = self.managedObjectContext.parent, parent == self.managedObjectContext && parent.hasChanges {
+                parent.perform() {
+                    do {
+                        try parent.save()
+                        print("parent context saved")
+                    }
+                    catch(let error) {
+                        print(error)
+                        return
+                    }
+                }
+            }
+            else
+            {
+                 print("parent context not saved")
             }
         }
     }
     
-    func insertContact(id:Int?, firstName : String,lastName : String,emaild : String,isFavorite : Bool,phoneNum : String,profilePic : String,sync : Bool) {
+    
+    // MARK: - Core Data Saving support
+    private func saveContext (managedObjectContext: NSManagedObjectContext,
+                             completion: @escaping (_ error: NSError?) -> () ) {
         
-        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
-       
-        let entity = NSEntityDescription.entity(forEntityName: "Contact",
-                                                in: managedContext)!
-        let contact = NSManagedObject(entity: entity,
-                                      insertInto: managedContext)
-        contact.setValue(firstName, forKey: "first_name")
-        contact.setValue(lastName, forKey: "last_name")
-        contact.setValue(emaild, forKey: "email")
-        contact.setValue(isFavorite, forKey: "favorite")
-        contact.setValue(phoneNum, forKey: "phone_number")
-        contact.setValue(profilePic, forKey: "profile_pic")
-        contact.setValue(sync, forKey: "syncStatus")
-        contact.setValue(id, forKey: "contactId")
+        if !managedObjectContext.hasChanges {
+            completion(nil)
+            return
+        }
+        
         do {
-            try managedContext.save()
-            print("saved")
-        } catch {
-            fatalError("Failure to save context: \(error)")
+            try managedObjectContext.save()
+        }
+        catch(let error) {
+            let nserror = error as NSError
+            print("Unresolved error \(nserror), \(nserror.userInfo)")
+            completion(nserror)
+            return
+        }
+        
+        // When using SQLite store and the managed object context's parent is the main MOC,
+        // save the parent object context to persist to the persistence store coordinator
+        if let parent = managedObjectContext.parent, parent == self.managedObjectContext {
+            
+            parent.perform() {
+                do {
+                    try parent.save()
+                    print("parent context saved")
+                }
+                catch(let error) {
+                    completion(error as NSError)
+                    return
+                }
+                completion(nil)
+            }
+        }
+        else
+        {
+            print("parent context not saved")
         }
     }
     
-    func deleteAllContacts()
+    func insertAllContacts(contacts : [ContactsAPIResponse],_ completion : @escaping() -> ())
     {
-        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
-        CoreDataManager.sharedManager.persistentContainer.performBackgroundTask() { (context) in
+        self.privateManagedObjectContext.perform {
+            let entity = NSEntityDescription.entity(forEntityName: "Contact",
+                                                    in: self.privateManagedObjectContext)!
+            for contact in contacts
+            {
+                let contactObject = NSManagedObject(entity: entity,
+                                              insertInto: self.privateManagedObjectContext)
+                
+                contactObject.setValue(contact.firstName ?? "", forKey: "first_name")
+                contactObject.setValue(contact.lastName ?? "", forKey: "last_name")
+                contactObject.setValue(contact.email ?? "", forKey: "email")
+                contactObject.setValue(contact.favorite ?? false, forKey: "favorite")
+                contactObject.setValue(contact.phoneNumber ?? "", forKey: "phone_number")
+                contactObject.setValue(contact.profilePic ?? "", forKey: "profile_pic")
+                contactObject.setValue(true, forKey: "syncStatus")
+                contactObject.setValue(contact.id ?? 0, forKey: "contactId")
+            }
+            self.saveContext(managedObjectContext: self.privateManagedObjectContext){ error in
+                print("Saved successfully")
+                completion()
+            }
+        }
+    }
+    
+    func insertContact(id : Int?,firstName : String,lastName : String,emaild : String,isFavorite : Bool,phoneNum : String,profilePic : String,sync : Bool,_ completion : @escaping() -> ()) {
+        
+        self.privateManagedObjectContext.perform {
+            let entity = NSEntityDescription.entity(forEntityName: "Contact",
+                                                    in: self.privateManagedObjectContext)!
+            var objectId = Int()
+            let contact = NSManagedObject(entity: entity,
+                                          insertInto: self.privateManagedObjectContext)
+            objectId = id == nil ? (contact.objectID.hashValue * (-1)) : id!
+            
+            contact.setValue(firstName, forKey: "first_name")
+            contact.setValue(lastName, forKey: "last_name")
+            contact.setValue(emaild, forKey: "email")
+            contact.setValue(isFavorite, forKey: "favorite")
+            contact.setValue(phoneNum, forKey: "phone_number")
+            contact.setValue(profilePic, forKey: "profile_pic")
+            contact.setValue(sync, forKey: "syncStatus")
+            contact.setValue(objectId, forKey: "contactId")
+            self.saveContext(managedObjectContext: self.privateManagedObjectContext){ error in
+                print("Saved successfully")
+                completion()
+            }
+        }
+    }
+    
+    func fetchAllContacts(_ completion : @escaping([Contact]?) -> ()) {
+        
+        self.privateManagedObjectContext.perform {
+            do {
+                let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+                let people = try self.managedObjectContext.fetch(fetchRequest)
+                completion(people as? [Contact])
+            } catch {
+                let saveError = error as NSError
+                print("Unable to Save Changes of Managed Object Context")
+                print("\(saveError), \(saveError.localizedDescription)")
+                completion([])
+            }
+        }
+    }
+    
+    
+    func deleteAllContacts(_ completion : @escaping()-> ())
+    {
+        self.privateManagedObjectContext.perform {
+            
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
             do {
-                let item = try context.fetch(fetchRequest)
+                let item = try self.privateManagedObjectContext.fetch(fetchRequest)
                 for i in item {
-                    context.delete(i)
-                    try context.save()
+                    self.privateManagedObjectContext.delete(i)
                 }
+                self.saveContext(managedObjectContext: self.privateManagedObjectContext){ error in
+                    print("Deleted successfully")
+                     completion()
+                }
+            } catch {
+                let saveError = error as NSError
+                print("Unable to Save Changes of Managed Object Context")
+                print("\(saveError), \(saveError.localizedDescription)")
+                completion()
+            }
+        }
+    }
+    
+    func fetchUnsysncContacts(_ completion : @escaping([Contact]?) -> ())
+    {
+        self.privateManagedObjectContext.perform {
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+            fetchRequest.predicate = NSPredicate(format: "syncStatus == %@" ,NSNumber(booleanLiteral: false))
+            do {
+                let contactsObject = try self.privateManagedObjectContext.fetch(fetchRequest)
+                completion(contactsObject as? [Contact])
             } catch let error as NSError {
                 print("Could not fetch. \(error), \(error.userInfo)")
+                 completion([])
             }
         }
     }
     
-    func fetchUnsysncContacts() ->  [Contact]?
+    func fetchContactDetail(id : Int, _ completion : @escaping([Contact]?) -> ())
     {
-        var contacts : [Contact]? = []
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
-        fetchRequest.predicate = NSPredicate(format: "syncStatus == %@" ,NSNumber(booleanLiteral: false))
-        
-        do {
-            let contactsObject = try context.fetch(fetchRequest)
-            contacts = contactsObject as? [Contact]
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-        return contacts
-    }
-    
-    func fetchContactDetail(id : Int) -> [Contact]?
-    {
-        var contacts : [Contact]? = []
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
-        fetchRequest.predicate = NSPredicate(format: "contactId == %@" ,NSNumber(integerLiteral: id))
-        
-        do {
-            let contactsObject = try context.fetch(fetchRequest)
-            contacts = contactsObject as? [Contact]
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-        return contacts
-    }
-    
-    func updateContact(id:Int, firstName : String,lastName : String,emaild : String,isFavorite : Bool,phoneNum : String,profilePic : String,sync : Bool) {
-        
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
-        fetchRequest.predicate = NSPredicate(format: "contactId == %@" ,NSNumber(integerLiteral: id))
-        
-        do {
-            let item = try context.fetch(fetchRequest)
-            for i in item {
-                i.setValue(firstName, forKey: "first_name")
-                i.setValue(lastName, forKey: "last_name")
-                i.setValue(emaild, forKey: "email")
-                i.setValue(isFavorite, forKey: "favorite")
-                i.setValue(phoneNum, forKey: "phone_number")
-                i.setValue(profilePic, forKey: "profile_pic")
-                i.setValue(sync, forKey: "syncStatus")
-                i.setValue(id, forKey: "contactId")
-                try context.save()
+        self.privateManagedObjectContext.perform {
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+            fetchRequest.predicate = NSPredicate(format: "contactId == %@" ,NSNumber(integerLiteral: id))
+            do {
+                let contactsObject = try self.privateManagedObjectContext.fetch(fetchRequest)
+                completion(contactsObject as? [Contact])
+            } catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+                completion([])
             }
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
-    func syncContact(contact : Contact,id : Int)
+    
+    func updateContact(id:Int, firstName : String,lastName : String,emaild : String,isFavorite : Bool,phoneNum : String,profilePic : String,sync : Bool,_ completion : @escaping(Error?)->()) {
+        
+        self.privateManagedObjectContext.perform {
+            
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+            fetchRequest.predicate = NSPredicate(format: "contactId == %@" ,NSNumber(integerLiteral: id))
+            do {
+                let item = try self.privateManagedObjectContext.fetch(fetchRequest)
+                for i in item {
+                    i.setValue(firstName, forKey: "first_name")
+                    i.setValue(lastName, forKey: "last_name")
+                    i.setValue(emaild, forKey: "email")
+                    i.setValue(isFavorite, forKey: "favorite")
+                    i.setValue(phoneNum, forKey: "phone_number")
+                    i.setValue(profilePic, forKey: "profile_pic")
+                    i.setValue(sync, forKey: "syncStatus")
+                    i.setValue(id, forKey: "contactId")
+                }
+                self.saveContext(managedObjectContext: self.privateManagedObjectContext){ error in
+                    print("Updated successfully")
+                    completion(nil)
+                }
+                
+            } catch {
+                let saveError = error as NSError
+                print("Unable to Save Changes of Managed Object Context")
+                print("\(saveError), \(saveError.localizedDescription)")
+                completion(error)
+            }
+        }
+    }
+    func syncContact(oldId : Int,newId : Int)
     {
-        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        do {
-            contact.setValue(true, forKey: "syncStatus")
-            contact.setValue(id, forKey: "contactId")
-            try context.save()
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+        self.privateManagedObjectContext.perform {
+            
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+            fetchRequest.predicate = NSPredicate(format: "contactId == %@" ,NSNumber(integerLiteral: oldId))
+            do {
+                let item = try self.privateManagedObjectContext.fetch(fetchRequest)
+                for i in item {
+                    i.setValue(true, forKey: "syncStatus")
+                    i.setValue(newId, forKey: "contactId")
+                }
+                self.saveContext(managedObjectContext: self.privateManagedObjectContext){ error in
+                    print("synced successfully")
+                }
+            } catch {
+                let saveError = error as NSError
+                print("Unable to Save Changes of Managed Object Context")
+                print("\(saveError), \(saveError.localizedDescription)")
+            }
         }
     }
     
     func delete(id: Int){
-        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
-        fetchRequest.predicate = NSPredicate(format: "contactId == %@" ,id)
+        
+        self.privateManagedObjectContext.perform {
             do {
-                let item = try managedContext.fetch(fetchRequest)
+                let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+                fetchRequest.predicate = NSPredicate(format: "contactId == %@" ,NSNumber(integerLiteral: id))
+                
+                let item = try self.managedObjectContext.fetch(fetchRequest)
                 for i in item {
-                    managedContext.delete(i)
-                    try managedContext.save()
+                    self.managedObjectContext.delete(i)
                 }
-            } catch let error as NSError {
-                print("Could not fetch. \(error), \(error.userInfo)")
+                self.saveContext(managedObjectContext: self.privateManagedObjectContext){ error in
+                    print("Deleted Contact successfully")
+                }
+            } catch {
+                let saveError = error as NSError
+                print("Unable to Save Changes of Managed Object Context")
+                print("\(saveError), \(saveError.localizedDescription)")
             }
-    }
-    func fetchAllContacts() -> [Contact]?{
-        var contacts : [Contact]? = []
-        let managedContext = CoreDataManager.sharedManager.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
-        do {
-            let people = try managedContext.fetch(fetchRequest)
-            contacts = people as? [Contact]
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
         }
-        return contacts
     }
+    
 }

@@ -1,0 +1,20 @@
+PODS:
+  - Kingfisher (5.5.0)
+  - ReachabilitySwift (4.3.1)
+
+DEPENDENCIES:
+  - Kingfisher (~> 5.0)
+  - ReachabilitySwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
+    - ReachabilitySwift
+
+SPEC CHECKSUMS:
+  Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+
+PODFILE CHECKSUM: 73e556114702c3db0c8ee5e6e4759387f0d05f80
+
+COCOAPODS: 1.6.2

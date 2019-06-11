@@ -275,9 +275,9 @@
 		D432BD3922ABC39C00AAD12F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D432BD4C22AC2E9C00AAD12F /* ContactDetailViewController.swift */,
 				D432BD0D22ABB1C900AAD12F /* ContactsListViewController.swift */,
 				D432BD4E22AC492500AAD12F /* CreateContactViewController.swift */,
-				D432BD4C22AC2E9C00AAD12F /* ContactDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -324,6 +324,7 @@
 				D432BCEC22ABA54A00AAD12F /* Sources */,
 				D432BCED22ABA54A00AAD12F /* Frameworks */,
 				D432BCEE22ABA54A00AAD12F /* Resources */,
+				875D7878AF62CBF0630E6134 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -343,6 +344,7 @@
 				D432BCF722ABA54A00AAD12F /* Sources */,
 				D432BCF822ABA54A00AAD12F /* Frameworks */,
 				D432BCF922ABA54A00AAD12F /* Resources */,
+				A7D3B8D018FDE63CB9737F9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -467,6 +469,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		875D7878AF62CBF0630E6134 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My ContactsTests/Pods-My ContactsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-My ContactsTests/Pods-My ContactsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7D3B8D018FDE63CB9737F9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-My ContactsUITests/Pods-My ContactsUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-My ContactsUITests/Pods-My ContactsUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DCF67585E3AA561C53293318 /* [CP] Embed Pods Frameworks */ = {

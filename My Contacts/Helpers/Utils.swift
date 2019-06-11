@@ -46,17 +46,25 @@ class ValidationUtils{
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: email)
     }
+    
+    static func isValidMobile(mobile : String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        let mobileRegEx = "^(\\+\\d{1,3}[- ]?)?\\d{10}$"
+        let mobileTest = NSPredicate(format:"SELF MATCHES %@", mobileRegEx)
+        return mobileTest.evaluate(with: mobile)
+        
+    }
 }
 
 class Utils {
     
-    func generateRandomNumber(numDigits : Int) -> UInt32{
-        var place : UInt32 = 1
-        var finalNumber : UInt32 = 0;
+    func generateRandomNumber(numDigits : Int) -> Int32{
+        var place : Int32 = 1
+        var finalNumber : Int32 = 0;
         for _ in 0..<numDigits
         {
             place *= 10
-            let randomNumber = arc4random_uniform(10)
+            let randomNumber = Int32(arc4random_uniform(10))
             finalNumber += randomNumber * place
         }
         return finalNumber
@@ -77,16 +85,17 @@ class Utils {
             complition(nil)
         }
     }
-    func getImage(imageName : String) -> UIImage?
+    func getImageUrl(imageName : String) -> String?
     {
         let fileManager = FileManager.default
         let imagePAth = (self.getDirectoryPath() as NSString).appendingPathComponent(imageName)
         if fileManager.fileExists(atPath: imagePAth){
-            return UIImage(contentsOfFile: imagePAth)
+            return imagePAth
         }else{
             return nil
         }
     }
+
     func getDirectoryPath() -> String {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
