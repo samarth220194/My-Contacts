@@ -1,0 +1,254 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NetworkConnection"
+provides-nominal:
+- "11My_Contacts17NetworkConnectionC"
+provides-member:
+- ["11My_Contacts17NetworkConnectionC", ""]
+provides-dynamic-lookup:
+- "networkStatusChanged"
+depends-top-level:
+- !private "!="
+- !private "=="
+- "AssignmentPrecedence"
+- "NSObject"
+- "NetworkConnection"
+- "Notification"
+- !private "NotificationCenter"
+- "Reachability"
+- "Void"
+- !private "print"
+depends-member:
+- ["s7CVarArgP", "NetworkConnection"]
+- !private ["s7CVarArgP", "NotificationCenter"]
+- !private ["s7CVarArgP", "Reachability"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addObserver"]
+- !private ["s7CVarArgP", "default"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "networkStatusChanged"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "reachability"]
+- !private ["s7CVarArgP", "sharedInstance"]
+- !private ["12ReachabilityAAC10ConnectionO", "cellular"]
+- !private ["12ReachabilityAAC10ConnectionO", "none"]
+- !private ["12ReachabilityAAC10ConnectionO", "wifi"]
+- ["s28CustomDebugStringConvertibleP", "NetworkConnection"]
+- !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
+- !private ["s28CustomDebugStringConvertibleP", "Reachability"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addObserver"]
+- !private ["s28CustomDebugStringConvertibleP", "connection"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "networkStatusChanged"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "reachability"]
+- !private ["s28CustomDebugStringConvertibleP", "reachabilityChanged"]
+- !private ["s28CustomDebugStringConvertibleP", "sharedInstance"]
+- !private ["s28CustomDebugStringConvertibleP", "startNotifier"]
+- !private ["s17CustomReflectableP", "connection"]
+- !private ["s17CustomReflectableP", "reachabilityChanged"]
+- !private ["s17CustomReflectableP", "startNotifier"]
+- ["s23CustomStringConvertibleP", "NetworkConnection"]
+- !private ["s23CustomStringConvertibleP", "NotificationCenter"]
+- !private ["s23CustomStringConvertibleP", "Reachability"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addObserver"]
+- !private ["s23CustomStringConvertibleP", "cellular"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "networkStatusChanged"]
+- !private ["s23CustomStringConvertibleP", "none"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "reachability"]
+- !private ["s23CustomStringConvertibleP", "sharedInstance"]
+- !private ["s23CustomStringConvertibleP", "wifi"]
+- !private ["Se", "connection"]
+- !private ["Se", "reachabilityChanged"]
+- !private ["Se", "startNotifier"]
+- !private ["SE", "connection"]
+- !private ["SE", "reachabilityChanged"]
+- !private ["SE", "startNotifier"]
+- ["SQ", "NetworkConnection"]
+- !private ["SQ", "NotificationCenter"]
+- !private ["SQ", "Reachability"]
+- ["SQ", ""]
+- !private ["SQ", "addObserver"]
+- !private ["SQ", "cellular"]
+- !private ["SQ", "connection"]
+- !private ["SQ", "default"]
+- ["SQ", "init"]
+- !private ["SQ", "networkStatusChanged"]
+- !private ["SQ", "none"]
+- !private ["SQ", "print"]
+- !private ["SQ", "reachability"]
+- !private ["SQ", "reachabilityChanged"]
+- !private ["SQ", "sharedInstance"]
+- !private ["SQ", "startNotifier"]
+- !private ["SQ", "wifi"]
+- !private ["s23ExpressibleByNilLiteralP", "connection"]
+- !private ["s23ExpressibleByNilLiteralP", "reachabilityChanged"]
+- !private ["s23ExpressibleByNilLiteralP", "startNotifier"]
+- ["SH", "NetworkConnection"]
+- !private ["SH", "NotificationCenter"]
+- !private ["SH", "Reachability"]
+- ["SH", ""]
+- !private ["SH", "addObserver"]
+- !private ["SH", "cellular"]
+- !private ["SH", "connection"]
+- !private ["SH", "default"]
+- ["SH", "init"]
+- !private ["SH", "networkStatusChanged"]
+- !private ["SH", "none"]
+- !private ["SH", "print"]
+- !private ["SH", "reachability"]
+- !private ["SH", "reachabilityChanged"]
+- !private ["SH", "sharedInstance"]
+- !private ["SH", "startNotifier"]
+- !private ["SH", "wifi"]
+- ["So8NSObjectC", "NetworkConnection"]
+- ["So8NSObjectC", "Notification"]
+- !private ["So8NSObjectC", "NotificationCenter"]
+- ["So8NSObjectC", "Reachability"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "addObserver"]
+- !private ["So8NSObjectC", "default"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "isReachable"]
+- ["So8NSObjectC", "isReachableViaWWAN"]
+- ["So8NSObjectC", "isReachableViaWiFi"]
+- ["So8NSObjectC", "isUnreachable"]
+- ["So8NSObjectC", "networkStatusChanged"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "reachability"]
+- ["So8NSObjectC", "sharedInstance"]
+- ["So8NSObjectC", "stopNotifier"]
+- ["So8NSObjectP", "NetworkConnection"]
+- !private ["So8NSObjectP", "NotificationCenter"]
+- !private ["So8NSObjectP", "Reachability"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addObserver"]
+- !private ["So8NSObjectP", "default"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "networkStatusChanged"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "reachability"]
+- !private ["So8NSObjectP", "sharedInstance"]
+- !private ["So18NSNotificationNamea", "reachabilityChanged"]
+- ["11My_Contacts17NetworkConnectionC", "NetworkConnection"]
+- ["11My_Contacts17NetworkConnectionC", "Notification"]
+- !private ["11My_Contacts17NetworkConnectionC", "NotificationCenter"]
+- ["11My_Contacts17NetworkConnectionC", "Reachability"]
+- ["11My_Contacts17NetworkConnectionC", "Void"]
+- ["11My_Contacts17NetworkConnectionC", "deinit"]
+- ["11My_Contacts17NetworkConnectionC", "init"]
+- ["11My_Contacts17NetworkConnectionC", "isReachable"]
+- ["11My_Contacts17NetworkConnectionC", "isReachableViaWWAN"]
+- ["11My_Contacts17NetworkConnectionC", "isReachableViaWiFi"]
+- ["11My_Contacts17NetworkConnectionC", "isUnreachable"]
+- ["11My_Contacts17NetworkConnectionC", "networkStatusChanged"]
+- !private ["11My_Contacts17NetworkConnectionC", "print"]
+- ["11My_Contacts17NetworkConnectionC", "reachability"]
+- ["11My_Contacts17NetworkConnectionC", "sharedInstance"]
+- ["11My_Contacts17NetworkConnectionC", "stopNotifier"]
+- !private ["So20NSNotificationCenterC", "addObserver"]
+- !private ["So20NSNotificationCenterC", "default"]
+- !private ["Sq", "connection"]
+- !private ["Sq", "reachabilityChanged"]
+- !private ["Sq", "startNotifier"]
+- !private ["SY", "reachabilityChanged"]
+- !private ["12ReachabilityAAC", "connection"]
+- !private ["12ReachabilityAAC", "init"]
+- !private ["12ReachabilityAAC", "startNotifier"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "reachabilityChanged"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NetworkConnection"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Reachability"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addObserver"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "networkStatusChanged"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reachability"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedInstance"]
+- !private ["s21_ObjectiveCBridgeableP", "connection"]
+- !private ["s21_ObjectiveCBridgeableP", "reachabilityChanged"]
+- !private ["s21_ObjectiveCBridgeableP", "startNotifier"]
+- !private ["s20_SwiftNewtypeWrapperP", "reachabilityChanged"]
+depends-nominal:
+- "s7CVarArgP"
+- !private "12ReachabilityAAC10ConnectionO"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s23ExpressibleByNilLiteralP"
+- "SH"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So18NSNotificationNamea"
+- "11My_Contacts17NetworkConnectionC"
+- !private "So20NSNotificationCenterC"
+- !private "Sq"
+- !private "SY"
+- !private "12ReachabilityAAC"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/Kingfisher.swiftmodule/x86_64.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules/Reachability.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-umbrella.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/ReachabilitySwift-umbrella.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/module.modulemap"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "d8633534e0c0485b4d345dd53af3351e"

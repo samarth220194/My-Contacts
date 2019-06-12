@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/ContactsListViewController.swift"
-            timestampString = "581964999.408986"
+            timestampString = "582005204.912846"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.467674"
+            timestampString = "582005204.913339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "deleteAllContacts(_:)"
             landmarkType = "7">
             <Locations>
@@ -282,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/ContactsListViewController.swift"
-            timestampString = "581964999.409145"
+            timestampString = "582005204.9134099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.4677759"
+            timestampString = "582005204.913753"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
             landmarkName = "fetchContactDetail(id:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,61 +314,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.467819"
+            timestampString = "582005204.913823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
             landmarkName = "fetchContactDetail(id:_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "My Contacts/ViewController/ContactDetailViewController.swift"
-            timestampString = "581964046.4678611"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "getServerContactDetails()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "My_Contacts.ContactDetailViewController.getServerContactDetails() -&gt; ()"
-                  moduleName = "My Contacts"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/samarth/Desktop/My%20Contacts/My%20Contacts/ViewController/ContactDetailViewController.swift"
-                  timestampString = "581936937.04828"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in My_Contacts.ContactDetailViewController.getServerContactDetails() -&gt; ()"
-                  moduleName = "My Contacts"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/samarth/Desktop/My%20Contacts/My%20Contacts/ViewController/ContactDetailViewController.swift"
-                  timestampString = "581936937.051888"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "235">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -394,7 +346,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/ContactsListViewController.swift"
-            timestampString = "581964999.409268"
+            timestampString = "582005204.913923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "136"
@@ -410,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.468024"
+            timestampString = "582005204.9142669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
             landmarkName = "syncContact(oldId:newId:)"
             landmarkType = "7">
             <Locations>
@@ -506,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.468225"
+            timestampString = "582005204.9143831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "saveContext(managedObjectContext:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.468266"
+            timestampString = "582005204.91444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "saveContext(managedObjectContext:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -538,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.468307"
+            timestampString = "582005204.914492"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
             landmarkName = "fetchUnsysncContacts(_:)"
             landmarkType = "7">
             <Locations>
@@ -586,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.468348"
+            timestampString = "582005204.9145451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "fetchUnsysncContacts(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -602,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.468389"
+            timestampString = "582005204.914597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "updateContact(id:firstName:lastName:emaild:isFavorite:phoneNum:profilePic:sync:_:)"
             landmarkType = "7">
             <Locations>
@@ -650,11 +602,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.468428"
+            timestampString = "582005204.914646"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
             landmarkName = "fetchContactDetail(id:_:)"
             landmarkType = "7">
             <Locations>
@@ -698,7 +650,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/CreateContactViewController.swift"
-            timestampString = "581971084.7282211"
+            timestampString = "581977537.7347831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "161"
@@ -714,7 +666,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/CreateContactViewController.swift"
-            timestampString = "581971084.728334"
+            timestampString = "581977537.734827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "236"
@@ -794,7 +746,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/ContactsListViewController.swift"
-            timestampString = "581964999.410378"
+            timestampString = "582005204.914776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "276"
@@ -842,11 +794,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.469611"
+            timestampString = "582005204.915136"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "updateContact(id:firstName:lastName:emaild:isFavorite:phoneNum:profilePic:sync:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -858,11 +810,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/Helpers/CoreDataManger.swift"
-            timestampString = "581964046.469654"
+            timestampString = "582005204.915199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "saveContext(managedObjectContext:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -874,7 +826,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/ContactsListViewController.swift"
-            timestampString = "581964999.4104739"
+            timestampString = "582005204.915255"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
@@ -890,7 +842,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/ContactsListViewController.swift"
-            timestampString = "581964999.410553"
+            timestampString = "582005204.915594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -906,7 +858,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/ContactsListViewController.swift"
-            timestampString = "581964999.410611"
+            timestampString = "582005204.91592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -986,7 +938,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/ContactsListViewController.swift"
-            timestampString = "581964999.410705"
+            timestampString = "582005204.916293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "187"
@@ -1034,13 +986,93 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "My Contacts/ViewController/ContactsListViewController.swift"
-            timestampString = "581964999.41076"
+            timestampString = "582005204.916616"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
             endingLineNumber = "57"
             landmarkName = "setData(contact_img:contact_name:isFavourite:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreateContactViewControllerTests/CreateContactViewControllerTests.swift"
+            timestampString = "582005204.916988"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "setUp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CreateContactViewControllerTests/CreateContactViewControllerTests.swift"
+            timestampString = "582005204.9173729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "testContactCreation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "My Contacts/Helpers/CoreDataManger.swift"
+            timestampString = "582005204.917684"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "saveChanges()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Contacts.CoreDataStack.saveChanges() -&gt; ()"
+                  moduleName = "My Contacts"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samarth/Desktop/My%20Contacts/My%20Contacts/Helpers/CoreDataManger.swift"
+                  timestampString = "582005238.1056449"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in My_Contacts.CoreDataStack.saveChanges() -&gt; ()"
+                  moduleName = "My Contacts"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samarth/Desktop/My%20Contacts/My%20Contacts/Helpers/CoreDataManger.swift"
+                  timestampString = "582005238.1075701"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "141">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

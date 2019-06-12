@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 import MessageUI
 
-protocol UpdateDetailsDelegate {
+protocol UpdateDetailsDelegate { // getting the details from CreateContactController to the ContactDetail Controller
     func getUpdatedDetail(contact : ContactsAPIResponse)
 }
 
@@ -26,13 +26,14 @@ class ContactDetailViewController: UIViewController,UpdateDetailsDelegate {
     
     var loader = UIView()
     var networkManager: NetworkManager!
-    var contactId : Int?
-    var contactDetail : ContactsAPIResponse?
-    var isFavourite : Bool?
     var coreDataStack : CoreDataStack!
+    var contactId : Int? //  for fetching the contact details
+    var contactDetail : ContactsAPIResponse? // for saving the contact detail so that while editing this modal can be passed further
+    var isFavourite : Bool? // for marking the contact as favourite or un-favourite
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        networkManager = NetworkManager()
         coreDataStack = CoreDataStack(modelName: "My_Contacts")
         customiseView()
         if (NetworkConnection.sharedInstance.reachability).connection != .none
@@ -50,8 +51,7 @@ class ContactDetailViewController: UIViewController,UpdateDetailsDelegate {
     func getUpdatedDetail(contact: ContactsAPIResponse) {
         setData(contact)
     }
-    
-    
+
     func customiseView()
     {
         loader = UIUtils.createLoader(vc: self)
@@ -63,8 +63,7 @@ class ContactDetailViewController: UIViewController,UpdateDetailsDelegate {
     func getServerContactDetails()
     {
         loader.isHidden = false
-        networkManager = NetworkManager()
-        networkManager.getContactDetails(id: contactId ?? 0){ data,error in
+       networkManager.getContactDetails(id: contactId ?? 0){ data,error in
             if error == nil {
                 self.parseData(data)
             }

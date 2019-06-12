@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "0a72a42e33b0dab17187149d995e8d44"
+build_time: [1560284067, 496011000]
+inputs:
+  "/Users/samarth/Desktop/My Contacts/APICallingTests/APICallingTests.swift": [1560284067, 136836372]

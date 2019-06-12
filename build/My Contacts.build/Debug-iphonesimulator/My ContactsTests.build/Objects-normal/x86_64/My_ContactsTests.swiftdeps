@@ -1,0 +1,675 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "My_ContactsTests"
+provides-nominal:
+- "16My_ContactsTestsAAC"
+provides-member:
+- ["16My_ContactsTestsAAC", ""]
+provides-dynamic-lookup:
+- "setUp"
+- "tearDown"
+- "testBackgroundContextConcurrencyType"
+- "testCoreDataDeletion"
+- "testCoreDataInsertion"
+- "testCoreDataUpdate"
+- "testMainContextConcurrencyType"
+- "testPerformanceExample"
+- "testPersistantStoreCreation"
+depends-top-level:
+- !private "-"
+- !private ">"
+- !private "??"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "CastingPrecedence"
+- !private "ContactsAPIResponse"
+- "CoreDataStack"
+- !private "FloatLiteralType"
+- !private "Int"
+- !private "IntegerLiteralType"
+- "My_ContactsTests"
+- !private "StringLiteralType"
+- !private "XCTAssertEqual"
+- !private "XCTAssertTrue"
+- !private "XCTFail"
+- "XCTestCase"
+- !private "sleep"
+depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["Sa", "count"]
+- !private ["Sa", "first"]
+- !private ["Sa", "subscript"]
+- !private ["s10ArraySliceV", "first_name"]
+- !private ["SK", "count"]
+- !private ["SK", "first"]
+- !private ["SK", "first_name"]
+- !private ["SK", "subscript"]
+- !private ["Sz", "init"]
+- !private ["s7CVarArgP", "ContactsAPIResponse"]
+- !private ["s7CVarArgP", "CoreDataStack"]
+- !private ["s7CVarArgP", "Int"]
+- !private ["s7CVarArgP", "XCTAssertEqual"]
+- !private ["s7CVarArgP", "XCTAssertTrue"]
+- !private ["s7CVarArgP", "XCTFail"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "concurrencyType"]
+- !private ["s7CVarArgP", "contactId"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "email"]
+- !private ["s7CVarArgP", "expectation"]
+- !private ["s7CVarArgP", "favorite"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "first_name"]
+- !private ["s7CVarArgP", "fulfill"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "last_name"]
+- !private ["s7CVarArgP", "measure"]
+- !private ["s7CVarArgP", "persistentStores"]
+- !private ["s7CVarArgP", "phone_number"]
+- !private ["s7CVarArgP", "profile_pic"]
+- !private ["s7CVarArgP", "sleep"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "sut"]
+- !private ["s7CVarArgP", "value"]
+- !private ["s7CVarArgP", "waitForExpectations"]
+- !private ["Sl", "count"]
+- !private ["Sl", "first"]
+- !private ["Sl", "first_name"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "init"]
+- !private ["11My_Contacts7ContactC", "contactId"]
+- !private ["11My_Contacts7ContactC", "email"]
+- !private ["11My_Contacts7ContactC", "favorite"]
+- !private ["11My_Contacts7ContactC", "first_name"]
+- !private ["11My_Contacts7ContactC", "last_name"]
+- !private ["11My_Contacts7ContactC", "phone_number"]
+- !private ["11My_Contacts7ContactC", "profile_pic"]
+- !private ["11My_Contacts7ContactC", "value"]
+- !private ["11My_Contacts0B11APIResponseV", "init"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "first"]
+- !private ["10Foundation15ContiguousBytesP", "first_name"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["11My_Contacts13CoreDataStackC", "delete"]
+- !private ["11My_Contacts13CoreDataStackC", "fetchAllContacts"]
+- !private ["11My_Contacts13CoreDataStackC", "fetchContactDetail"]
+- !private ["11My_Contacts13CoreDataStackC", "init"]
+- !private ["11My_Contacts13CoreDataStackC", "insertAllContacts"]
+- !private ["11My_Contacts13CoreDataStackC", "managedObjectContext"]
+- !private ["11My_Contacts13CoreDataStackC", "persistentStoreCoordinator"]
+- !private ["11My_Contacts13CoreDataStackC", "privateManagedObjectContext"]
+- !private ["11My_Contacts13CoreDataStackC", "updateContact"]
+- !private ["s28CustomDebugStringConvertibleP", "ContactsAPIResponse"]
+- !private ["s28CustomDebugStringConvertibleP", "CoreDataStack"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertEqual"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertTrue"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTFail"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "concurrencyType"]
+- !private ["s28CustomDebugStringConvertibleP", "contactId"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "delete"]
+- !private ["s28CustomDebugStringConvertibleP", "email"]
+- !private ["s28CustomDebugStringConvertibleP", "expectation"]
+- !private ["s28CustomDebugStringConvertibleP", "favorite"]
+- !private ["s28CustomDebugStringConvertibleP", "fetchAllContacts"]
+- !private ["s28CustomDebugStringConvertibleP", "fetchContactDetail"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "first_name"]
+- !private ["s28CustomDebugStringConvertibleP", "fulfill"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "insertAllContacts"]
+- !private ["s28CustomDebugStringConvertibleP", "last_name"]
+- !private ["s28CustomDebugStringConvertibleP", "managedObjectContext"]
+- !private ["s28CustomDebugStringConvertibleP", "measure"]
+- !private ["s28CustomDebugStringConvertibleP", "persistentStoreCoordinator"]
+- !private ["s28CustomDebugStringConvertibleP", "persistentStores"]
+- !private ["s28CustomDebugStringConvertibleP", "phone_number"]
+- !private ["s28CustomDebugStringConvertibleP", "privateManagedObjectContext"]
+- !private ["s28CustomDebugStringConvertibleP", "profile_pic"]
+- !private ["s28CustomDebugStringConvertibleP", "sleep"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "sut"]
+- !private ["s28CustomDebugStringConvertibleP", "updateContact"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
+- !private ["s28CustomDebugStringConvertibleP", "waitForExpectations"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "delete"]
+- !private ["s17CustomReflectableP", "fetchAllContacts"]
+- !private ["s17CustomReflectableP", "fetchContactDetail"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "first_name"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "insertAllContacts"]
+- !private ["s17CustomReflectableP", "managedObjectContext"]
+- !private ["s17CustomReflectableP", "persistentStoreCoordinator"]
+- !private ["s17CustomReflectableP", "privateManagedObjectContext"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "updateContact"]
+- !private ["s23CustomStringConvertibleP", "ContactsAPIResponse"]
+- !private ["s23CustomStringConvertibleP", "CoreDataStack"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertEqual"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertTrue"]
+- !private ["s23CustomStringConvertibleP", "XCTFail"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "concurrencyType"]
+- !private ["s23CustomStringConvertibleP", "contactId"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "email"]
+- !private ["s23CustomStringConvertibleP", "expectation"]
+- !private ["s23CustomStringConvertibleP", "favorite"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "first_name"]
+- !private ["s23CustomStringConvertibleP", "fulfill"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "last_name"]
+- !private ["s23CustomStringConvertibleP", "measure"]
+- !private ["s23CustomStringConvertibleP", "persistentStores"]
+- !private ["s23CustomStringConvertibleP", "phone_number"]
+- !private ["s23CustomStringConvertibleP", "profile_pic"]
+- !private ["s23CustomStringConvertibleP", "sleep"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "sut"]
+- !private ["s23CustomStringConvertibleP", "value"]
+- !private ["s23CustomStringConvertibleP", "waitForExpectations"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "first"]
+- !private ["10Foundation12DataProtocolP", "first_name"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "count"]
+- !private ["Se", "delete"]
+- !private ["Se", "fetchAllContacts"]
+- !private ["Se", "fetchContactDetail"]
+- !private ["Se", "first"]
+- !private ["Se", "init"]
+- !private ["Se", "insertAllContacts"]
+- !private ["Se", "managedObjectContext"]
+- !private ["Se", "persistentStoreCoordinator"]
+- !private ["Se", "privateManagedObjectContext"]
+- !private ["Se", "subscript"]
+- !private ["Se", "updateContact"]
+- !private ["SE", "count"]
+- !private ["SE", "delete"]
+- !private ["SE", "fetchAllContacts"]
+- !private ["SE", "fetchContactDetail"]
+- !private ["SE", "first"]
+- !private ["SE", "init"]
+- !private ["SE", "insertAllContacts"]
+- !private ["SE", "managedObjectContext"]
+- !private ["SE", "persistentStoreCoordinator"]
+- !private ["SE", "privateManagedObjectContext"]
+- !private ["SE", "subscript"]
+- !private ["SE", "updateContact"]
+- !private ["SQ", "ContactsAPIResponse"]
+- !private ["SQ", "CoreDataStack"]
+- !private ["SQ", "Int"]
+- !private ["SQ", "XCTAssertEqual"]
+- !private ["SQ", "XCTAssertTrue"]
+- !private ["SQ", "XCTFail"]
+- ["SQ", ""]
+- !private ["SQ", "concurrencyType"]
+- !private ["SQ", "contactId"]
+- !private ["SQ", "count"]
+- !private ["SQ", "delete"]
+- !private ["SQ", "email"]
+- !private ["SQ", "expectation"]
+- !private ["SQ", "favorite"]
+- !private ["SQ", "fetchAllContacts"]
+- !private ["SQ", "fetchContactDetail"]
+- !private ["SQ", "first"]
+- !private ["SQ", "first_name"]
+- !private ["SQ", "fulfill"]
+- !private ["SQ", "init"]
+- !private ["SQ", "insertAllContacts"]
+- !private ["SQ", "last_name"]
+- !private ["SQ", "mainQueueConcurrencyType"]
+- !private ["SQ", "managedObjectContext"]
+- !private ["SQ", "measure"]
+- !private ["SQ", "persistentStoreCoordinator"]
+- !private ["SQ", "persistentStores"]
+- !private ["SQ", "phone_number"]
+- !private ["SQ", "privateManagedObjectContext"]
+- !private ["SQ", "privateQueueConcurrencyType"]
+- !private ["SQ", "profile_pic"]
+- !private ["SQ", "sleep"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "sut"]
+- !private ["SQ", "updateContact"]
+- !private ["SQ", "value"]
+- !private ["SQ", "waitForExpectations"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "first_name"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "delete"]
+- !private ["s23ExpressibleByNilLiteralP", "fetchAllContacts"]
+- !private ["s23ExpressibleByNilLiteralP", "fetchContactDetail"]
+- !private ["s23ExpressibleByNilLiteralP", "insertAllContacts"]
+- !private ["s23ExpressibleByNilLiteralP", "managedObjectContext"]
+- !private ["s23ExpressibleByNilLiteralP", "persistentStoreCoordinator"]
+- !private ["s23ExpressibleByNilLiteralP", "privateManagedObjectContext"]
+- !private ["s23ExpressibleByNilLiteralP", "updateContact"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SH", "ContactsAPIResponse"]
+- !private ["SH", "CoreDataStack"]
+- !private ["SH", "Int"]
+- !private ["SH", "XCTAssertEqual"]
+- !private ["SH", "XCTAssertTrue"]
+- !private ["SH", "XCTFail"]
+- ["SH", ""]
+- !private ["SH", "concurrencyType"]
+- !private ["SH", "contactId"]
+- !private ["SH", "count"]
+- !private ["SH", "delete"]
+- !private ["SH", "email"]
+- !private ["SH", "expectation"]
+- !private ["SH", "favorite"]
+- !private ["SH", "fetchAllContacts"]
+- !private ["SH", "fetchContactDetail"]
+- !private ["SH", "first"]
+- !private ["SH", "first_name"]
+- !private ["SH", "fulfill"]
+- !private ["SH", "init"]
+- !private ["SH", "insertAllContacts"]
+- !private ["SH", "last_name"]
+- !private ["SH", "mainQueueConcurrencyType"]
+- !private ["SH", "managedObjectContext"]
+- !private ["SH", "measure"]
+- !private ["SH", "persistentStoreCoordinator"]
+- !private ["SH", "persistentStores"]
+- !private ["SH", "phone_number"]
+- !private ["SH", "privateManagedObjectContext"]
+- !private ["SH", "privateQueueConcurrencyType"]
+- !private ["SH", "profile_pic"]
+- !private ["SH", "sleep"]
+- !private ["SH", "subscript"]
+- !private ["SH", "sut"]
+- !private ["SH", "updateContact"]
+- !private ["SH", "value"]
+- !private ["SH", "waitForExpectations"]
+- !private ["Si", "init"]
+- !private ["s20LazySequenceProtocolP", "first_name"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "count"]
+- !private ["SM", "first"]
+- !private ["SM", "first_name"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "first"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["16My_ContactsTestsAAC", "ContactsAPIResponse"]
+- ["16My_ContactsTestsAAC", "CoreDataStack"]
+- !private ["16My_ContactsTestsAAC", "Int"]
+- !private ["16My_ContactsTestsAAC", "XCTAssertEqual"]
+- !private ["16My_ContactsTestsAAC", "XCTAssertTrue"]
+- !private ["16My_ContactsTestsAAC", "XCTFail"]
+- ["16My_ContactsTestsAAC", "deinit"]
+- !private ["16My_ContactsTestsAAC", "expectation"]
+- ["16My_ContactsTestsAAC", "init"]
+- !private ["16My_ContactsTestsAAC", "measure"]
+- ["16My_ContactsTestsAAC", "setUp"]
+- !private ["16My_ContactsTestsAAC", "sleep"]
+- ["16My_ContactsTestsAAC", "sut"]
+- ["16My_ContactsTestsAAC", "tearDown"]
+- ["16My_ContactsTestsAAC", "testBackgroundContextConcurrencyType"]
+- ["16My_ContactsTestsAAC", "testCoreDataDeletion"]
+- ["16My_ContactsTestsAAC", "testCoreDataInsertion"]
+- ["16My_ContactsTestsAAC", "testCoreDataUpdate"]
+- ["16My_ContactsTestsAAC", "testMainContextConcurrencyType"]
+- ["16My_ContactsTestsAAC", "testPerformanceExample"]
+- ["16My_ContactsTestsAAC", "testPersistantStoreCreation"]
+- !private ["16My_ContactsTestsAAC", "waitForExpectations"]
+- !private ["So8NSCodingP", "concurrencyType"]
+- !private ["So20NSFetchRequestResultP", "contactId"]
+- !private ["So20NSFetchRequestResultP", "email"]
+- !private ["So20NSFetchRequestResultP", "favorite"]
+- !private ["So20NSFetchRequestResultP", "first_name"]
+- !private ["So20NSFetchRequestResultP", "last_name"]
+- !private ["So20NSFetchRequestResultP", "phone_number"]
+- !private ["So20NSFetchRequestResultP", "profile_pic"]
+- !private ["So20NSFetchRequestResultP", "value"]
+- !private ["So9NSLockingP", "concurrencyType"]
+- !private ["So9NSLockingP", "persistentStores"]
+- !private ["So15NSManagedObjectC", "contactId"]
+- !private ["So15NSManagedObjectC", "email"]
+- !private ["So15NSManagedObjectC", "favorite"]
+- !private ["So15NSManagedObjectC", "first_name"]
+- !private ["So15NSManagedObjectC", "last_name"]
+- !private ["So15NSManagedObjectC", "phone_number"]
+- !private ["So15NSManagedObjectC", "profile_pic"]
+- !private ["So15NSManagedObjectC", "value"]
+- !private ["So22NSManagedObjectContextC", "concurrencyType"]
+- !private ["So37NSManagedObjectContextConcurrencyTypeV", "mainQueueConcurrencyType"]
+- !private ["So37NSManagedObjectContextConcurrencyTypeV", "privateQueueConcurrencyType"]
+- !private ["So8NSObjectC", "ContactsAPIResponse"]
+- ["So8NSObjectC", "CoreDataStack"]
+- !private ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "XCTAssertEqual"]
+- !private ["So8NSObjectC", "XCTAssertTrue"]
+- !private ["So8NSObjectC", "XCTFail"]
+- !private ["So8NSObjectC", "concurrencyType"]
+- !private ["So8NSObjectC", "contactId"]
+- !private ["So8NSObjectC", "email"]
+- !private ["So8NSObjectC", "expectation"]
+- !private ["So8NSObjectC", "favorite"]
+- !private ["So8NSObjectC", "first_name"]
+- !private ["So8NSObjectC", "fulfill"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "last_name"]
+- !private ["So8NSObjectC", "measure"]
+- !private ["So8NSObjectC", "persistentStores"]
+- !private ["So8NSObjectC", "phone_number"]
+- !private ["So8NSObjectC", "profile_pic"]
+- ["So8NSObjectC", "setUp"]
+- !private ["So8NSObjectC", "sleep"]
+- ["So8NSObjectC", "sut"]
+- ["So8NSObjectC", "tearDown"]
+- ["So8NSObjectC", "testBackgroundContextConcurrencyType"]
+- ["So8NSObjectC", "testCoreDataDeletion"]
+- ["So8NSObjectC", "testCoreDataInsertion"]
+- ["So8NSObjectC", "testCoreDataUpdate"]
+- ["So8NSObjectC", "testMainContextConcurrencyType"]
+- ["So8NSObjectC", "testPerformanceExample"]
+- ["So8NSObjectC", "testPersistantStoreCreation"]
+- !private ["So8NSObjectC", "value"]
+- !private ["So8NSObjectC", "waitForExpectations"]
+- !private ["So8NSObjectP", "ContactsAPIResponse"]
+- !private ["So8NSObjectP", "CoreDataStack"]
+- !private ["So8NSObjectP", "Int"]
+- !private ["So8NSObjectP", "XCTAssertEqual"]
+- !private ["So8NSObjectP", "XCTAssertTrue"]
+- !private ["So8NSObjectP", "XCTFail"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "concurrencyType"]
+- !private ["So8NSObjectP", "contactId"]
+- !private ["So8NSObjectP", "email"]
+- !private ["So8NSObjectP", "expectation"]
+- !private ["So8NSObjectP", "favorite"]
+- !private ["So8NSObjectP", "first_name"]
+- !private ["So8NSObjectP", "fulfill"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "last_name"]
+- !private ["So8NSObjectP", "measure"]
+- !private ["So8NSObjectP", "persistentStores"]
+- !private ["So8NSObjectP", "phone_number"]
+- !private ["So8NSObjectP", "profile_pic"]
+- !private ["So8NSObjectP", "sleep"]
+- !private ["So8NSObjectP", "sut"]
+- !private ["So8NSObjectP", "value"]
+- !private ["So8NSObjectP", "waitForExpectations"]
+- !private ["So28NSPersistentStoreCoordinatorC", "persistentStores"]
+- !private ["Sj", "init"]
+- !private ["Sq", "delete"]
+- !private ["Sq", "fetchAllContacts"]
+- !private ["Sq", "fetchContactDetail"]
+- !private ["Sq", "insertAllContacts"]
+- !private ["Sq", "managedObjectContext"]
+- !private ["Sq", "persistentStoreCoordinator"]
+- !private ["Sq", "privateManagedObjectContext"]
+- !private ["Sq", "updateContact"]
+- !private ["Sk", "count"]
+- !private ["Sk", "first"]
+- !private ["Sk", "first_name"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "count"]
+- !private ["Sm", "first"]
+- !private ["Sm", "first_name"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "mainQueueConcurrencyType"]
+- !private ["SY", "privateQueueConcurrencyType"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", "count"]
+- !private ["ST", "first"]
+- !private ["ST", "first_name"]
+- !private ["ST", "subscript"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["s5SliceV", "first_name"]
+- !private ["Sx", "init"]
+- !private ["So11XCTActivityP", "ContactsAPIResponse"]
+- !private ["So11XCTActivityP", "CoreDataStack"]
+- !private ["So11XCTActivityP", "Int"]
+- !private ["So11XCTActivityP", "XCTAssertEqual"]
+- !private ["So11XCTActivityP", "XCTAssertTrue"]
+- !private ["So11XCTActivityP", "XCTFail"]
+- ["So11XCTActivityP", ""]
+- !private ["So11XCTActivityP", "expectation"]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "measure"]
+- !private ["So11XCTActivityP", "sleep"]
+- !private ["So11XCTActivityP", "sut"]
+- !private ["So11XCTActivityP", "waitForExpectations"]
+- !private ["So17XCTWaiterDelegateP", "ContactsAPIResponse"]
+- !private ["So17XCTWaiterDelegateP", "CoreDataStack"]
+- !private ["So17XCTWaiterDelegateP", "Int"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertEqual"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertTrue"]
+- !private ["So17XCTWaiterDelegateP", "XCTFail"]
+- ["So17XCTWaiterDelegateP", ""]
+- !private ["So17XCTWaiterDelegateP", "expectation"]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "measure"]
+- !private ["So17XCTWaiterDelegateP", "sleep"]
+- !private ["So17XCTWaiterDelegateP", "sut"]
+- !private ["So17XCTWaiterDelegateP", "waitForExpectations"]
+- !private ["So6XCTestC", "ContactsAPIResponse"]
+- ["So6XCTestC", "CoreDataStack"]
+- !private ["So6XCTestC", "Int"]
+- !private ["So6XCTestC", "XCTAssertEqual"]
+- !private ["So6XCTestC", "XCTAssertTrue"]
+- !private ["So6XCTestC", "XCTFail"]
+- !private ["So6XCTestC", "expectation"]
+- ["So6XCTestC", "init"]
+- !private ["So6XCTestC", "measure"]
+- ["So6XCTestC", "setUp"]
+- !private ["So6XCTestC", "sleep"]
+- ["So6XCTestC", "sut"]
+- ["So6XCTestC", "tearDown"]
+- ["So6XCTestC", "testBackgroundContextConcurrencyType"]
+- ["So6XCTestC", "testCoreDataDeletion"]
+- ["So6XCTestC", "testCoreDataInsertion"]
+- ["So6XCTestC", "testCoreDataUpdate"]
+- ["So6XCTestC", "testMainContextConcurrencyType"]
+- ["So6XCTestC", "testPerformanceExample"]
+- ["So6XCTestC", "testPersistantStoreCreation"]
+- !private ["So6XCTestC", "waitForExpectations"]
+- !private ["So10XCTestCaseC", "ContactsAPIResponse"]
+- ["So10XCTestCaseC", "CoreDataStack"]
+- !private ["So10XCTestCaseC", "Int"]
+- !private ["So10XCTestCaseC", "XCTAssertEqual"]
+- !private ["So10XCTestCaseC", "XCTAssertTrue"]
+- !private ["So10XCTestCaseC", "XCTFail"]
+- ["So10XCTestCaseC", ""]
+- !private ["So10XCTestCaseC", "expectation"]
+- ["So10XCTestCaseC", "init"]
+- !private ["So10XCTestCaseC", "measure"]
+- ["So10XCTestCaseC", "setUp"]
+- !private ["So10XCTestCaseC", "sleep"]
+- ["So10XCTestCaseC", "sut"]
+- ["So10XCTestCaseC", "tearDown"]
+- ["So10XCTestCaseC", "testBackgroundContextConcurrencyType"]
+- ["So10XCTestCaseC", "testCoreDataDeletion"]
+- ["So10XCTestCaseC", "testCoreDataInsertion"]
+- ["So10XCTestCaseC", "testCoreDataUpdate"]
+- ["So10XCTestCaseC", "testMainContextConcurrencyType"]
+- ["So10XCTestCaseC", "testPerformanceExample"]
+- ["So10XCTestCaseC", "testPersistantStoreCreation"]
+- !private ["So10XCTestCaseC", "waitForExpectations"]
+- !private ["So17XCTestExpectationC", "fulfill"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s14_ArrayProtocolP", "first_name"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "first_name"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "first"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ContactsAPIResponse"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CoreDataStack"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertEqual"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertTrue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTFail"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "concurrencyType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contactId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "email"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "expectation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "favorite"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "first_name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fulfill"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "last_name"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "measure"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "persistentStores"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "phone_number"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "profile_pic"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sleep"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sut"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "waitForExpectations"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "delete"]
+- !private ["s21_ObjectiveCBridgeableP", "fetchAllContacts"]
+- !private ["s21_ObjectiveCBridgeableP", "fetchContactDetail"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "insertAllContacts"]
+- !private ["s21_ObjectiveCBridgeableP", "managedObjectContext"]
+- !private ["s21_ObjectiveCBridgeableP", "persistentStoreCoordinator"]
+- !private ["s21_ObjectiveCBridgeableP", "privateManagedObjectContext"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "updateContact"]
+depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sa"
+- !private "s10ArraySliceV"
+- !private "SK"
+- !private "Sz"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "11My_Contacts7ContactC"
+- !private "11My_Contacts0B11APIResponseV"
+- !private "10Foundation15ContiguousBytesP"
+- !private "11My_Contacts13CoreDataStackC"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s17FixedWidthIntegerP"
+- "SH"
+- !private "Si"
+- !private "s20LazySequenceProtocolP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- "16My_ContactsTestsAAC"
+- !private "So8NSCodingP"
+- !private "So20NSFetchRequestResultP"
+- !private "So9NSLockingP"
+- !private "So15NSManagedObjectC"
+- !private "So22NSManagedObjectContextC"
+- !private "So37NSManagedObjectContextConcurrencyTypeV"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So28NSPersistentStoreCoordinatorC"
+- !private "Sj"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "s5SliceV"
+- !private "Sx"
+- "So11XCTActivityP"
+- "So17XCTWaiterDelegateP"
+- "So6XCTestC"
+- "So10XCTestCaseC"
+- !private "So17XCTestExpectationC"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/Kingfisher.swiftmodule/x86_64.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/My_Contacts.swiftmodule/x86_64.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules/Reachability.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-umbrella.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/ReachabilitySwift-umbrella.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "235cc036636945d38039440bbe405d95"

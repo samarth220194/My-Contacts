@@ -1,0 +1,334 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ContactsSection"
+- "ContactsAPIResponse"
+- "Contacts"
+provides-nominal:
+- "11My_Contacts0B7SectionV"
+- "11My_Contacts0B11APIResponseV"
+- "11My_Contacts0B11APIResponseV10CodingKeysO"
+provides-member:
+- ["11My_Contacts0B7SectionV", ""]
+- ["11My_Contacts0B11APIResponseV", ""]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "=="
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "Codable"
+- "CodingKey"
+- "Contacts"
+- "ContactsAPIResponse"
+- "ContactsSection"
+- "Decoder"
+- "Int"
+- "String"
+- !private "_findStringSwitchCase"
+- !private "~="
+depends-member:
+- ["s9CodingKeyP", "=="]
+- ["s9CodingKeyP", "RawValue"]
+- ["s9CodingKeyP", ""]
+- ["s9CodingKeyP", "_Default_RawValue"]
+- !private ["s9CodingKeyP", "_findStringSwitchCase"]
+- ["s9CodingKeyP", "_rawHashValue"]
+- !private ["s9CodingKeyP", "createdAt"]
+- ["s9CodingKeyP", "debugDescription"]
+- ["s9CodingKeyP", "description"]
+- !private ["s9CodingKeyP", "email"]
+- !private ["s9CodingKeyP", "favorite"]
+- !private ["s9CodingKeyP", "firstName"]
+- ["s9CodingKeyP", "hash"]
+- ["s9CodingKeyP", "hashValue"]
+- !private ["s9CodingKeyP", "id"]
+- ["s9CodingKeyP", "init"]
+- ["s9CodingKeyP", "intValue"]
+- !private ["s9CodingKeyP", "lastName"]
+- !private ["s9CodingKeyP", "phoneNumber"]
+- !private ["s9CodingKeyP", "profilePic"]
+- ["s9CodingKeyP", "rawValue"]
+- ["s9CodingKeyP", "stringValue"]
+- !private ["s9CodingKeyP", "updatedAt"]
+- !private ["s9CodingKeyP", "url"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "=="]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "RawValue"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "_Default_RawValue"]
+- !private ["11My_Contacts0B11APIResponseV10CodingKeysO", "_findStringSwitchCase"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "_rawHashValue"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "createdAt"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "debugDescription"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "deinit"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "description"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "email"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "favorite"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "firstName"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "hash"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "hashValue"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "id"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "init"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "intValue"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "lastName"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "phoneNumber"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "profilePic"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "rawValue"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "stringValue"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "updatedAt"]
+- ["11My_Contacts0B11APIResponseV10CodingKeysO", "url"]
+- ["11My_Contacts0B11APIResponseV", "Bool"]
+- ["11My_Contacts0B11APIResponseV", "CodingKey"]
+- ["11My_Contacts0B11APIResponseV", "CodingKeys"]
+- ["11My_Contacts0B11APIResponseV", "Decoder"]
+- ["11My_Contacts0B11APIResponseV", "Int"]
+- ["11My_Contacts0B11APIResponseV", "String"]
+- !private ["11My_Contacts0B11APIResponseV", "_findStringSwitchCase"]
+- ["11My_Contacts0B11APIResponseV", "createdAt"]
+- ["11My_Contacts0B11APIResponseV", "deinit"]
+- ["11My_Contacts0B11APIResponseV", "email"]
+- ["11My_Contacts0B11APIResponseV", "encode"]
+- ["11My_Contacts0B11APIResponseV", "favorite"]
+- ["11My_Contacts0B11APIResponseV", "firstName"]
+- ["11My_Contacts0B11APIResponseV", "id"]
+- ["11My_Contacts0B11APIResponseV", "init"]
+- ["11My_Contacts0B11APIResponseV", "lastName"]
+- ["11My_Contacts0B11APIResponseV", "phoneNumber"]
+- ["11My_Contacts0B11APIResponseV", "profilePic"]
+- ["11My_Contacts0B11APIResponseV", "updatedAt"]
+- ["11My_Contacts0B11APIResponseV", "url"]
+- ["11My_Contacts0B7SectionV", "ContactsAPIResponse"]
+- ["11My_Contacts0B7SectionV", "String"]
+- ["11My_Contacts0B7SectionV", "init"]
+- ["11My_Contacts0B7SectionV", "letter"]
+- ["11My_Contacts0B7SectionV", "names"]
+- ["s28CustomDebugStringConvertibleP", "=="]
+- ["s28CustomDebugStringConvertibleP", "RawValue"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s28CustomDebugStringConvertibleP", "_Default_RawValue"]
+- !private ["s28CustomDebugStringConvertibleP", "_findStringSwitchCase"]
+- ["s28CustomDebugStringConvertibleP", "_rawHashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "createdAt"]
+- ["s28CustomDebugStringConvertibleP", "debugDescription"]
+- ["s28CustomDebugStringConvertibleP", "description"]
+- !private ["s28CustomDebugStringConvertibleP", "email"]
+- !private ["s28CustomDebugStringConvertibleP", "favorite"]
+- !private ["s28CustomDebugStringConvertibleP", "firstName"]
+- ["s28CustomDebugStringConvertibleP", "hash"]
+- ["s28CustomDebugStringConvertibleP", "hashValue"]
+- !private ["s28CustomDebugStringConvertibleP", "id"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "intValue"]
+- !private ["s28CustomDebugStringConvertibleP", "lastName"]
+- !private ["s28CustomDebugStringConvertibleP", "phoneNumber"]
+- !private ["s28CustomDebugStringConvertibleP", "profilePic"]
+- ["s28CustomDebugStringConvertibleP", "rawValue"]
+- ["s28CustomDebugStringConvertibleP", "stringValue"]
+- !private ["s28CustomDebugStringConvertibleP", "updatedAt"]
+- !private ["s28CustomDebugStringConvertibleP", "url"]
+- ["s23CustomStringConvertibleP", "=="]
+- ["s23CustomStringConvertibleP", "RawValue"]
+- ["s23CustomStringConvertibleP", ""]
+- ["s23CustomStringConvertibleP", "_Default_RawValue"]
+- !private ["s23CustomStringConvertibleP", "_findStringSwitchCase"]
+- ["s23CustomStringConvertibleP", "_rawHashValue"]
+- !private ["s23CustomStringConvertibleP", "createdAt"]
+- ["s23CustomStringConvertibleP", "debugDescription"]
+- ["s23CustomStringConvertibleP", "description"]
+- !private ["s23CustomStringConvertibleP", "email"]
+- !private ["s23CustomStringConvertibleP", "favorite"]
+- !private ["s23CustomStringConvertibleP", "firstName"]
+- ["s23CustomStringConvertibleP", "hash"]
+- ["s23CustomStringConvertibleP", "hashValue"]
+- !private ["s23CustomStringConvertibleP", "id"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "intValue"]
+- !private ["s23CustomStringConvertibleP", "lastName"]
+- !private ["s23CustomStringConvertibleP", "phoneNumber"]
+- !private ["s23CustomStringConvertibleP", "profilePic"]
+- ["s23CustomStringConvertibleP", "rawValue"]
+- ["s23CustomStringConvertibleP", "stringValue"]
+- !private ["s23CustomStringConvertibleP", "updatedAt"]
+- !private ["s23CustomStringConvertibleP", "url"]
+- !private ["Se", "Bool"]
+- !private ["Se", "CodingKeys"]
+- !private ["Se", "Int"]
+- !private ["Se", "String"]
+- ["Se", ""]
+- !private ["Se", "_findStringSwitchCase"]
+- !private ["Se", "createdAt"]
+- !private ["Se", "email"]
+- ["Se", "encode"]
+- !private ["Se", "favorite"]
+- !private ["Se", "firstName"]
+- !private ["Se", "id"]
+- ["Se", "init"]
+- !private ["Se", "lastName"]
+- !private ["Se", "phoneNumber"]
+- !private ["Se", "profilePic"]
+- !private ["Se", "updatedAt"]
+- !private ["Se", "url"]
+- !private ["s7DecoderP", "container"]
+- !private ["SE", "Bool"]
+- !private ["SE", "CodingKeys"]
+- !private ["SE", "Int"]
+- !private ["SE", "String"]
+- ["SE", ""]
+- !private ["SE", "_findStringSwitchCase"]
+- !private ["SE", "createdAt"]
+- !private ["SE", "email"]
+- ["SE", "encode"]
+- !private ["SE", "favorite"]
+- !private ["SE", "firstName"]
+- !private ["SE", "id"]
+- ["SE", "init"]
+- !private ["SE", "lastName"]
+- !private ["SE", "phoneNumber"]
+- !private ["SE", "profilePic"]
+- !private ["SE", "updatedAt"]
+- !private ["SE", "url"]
+- !private ["s7EncoderP", "container"]
+- ["SQ", "=="]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "createdAt"]
+- ["SQ", "debugDescription"]
+- ["SQ", "description"]
+- !private ["SQ", "email"]
+- !private ["SQ", "favorite"]
+- !private ["SQ", "firstName"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- !private ["SQ", "id"]
+- ["SQ", "init"]
+- ["SQ", "intValue"]
+- !private ["SQ", "lastName"]
+- !private ["SQ", "phoneNumber"]
+- !private ["SQ", "profilePic"]
+- ["SQ", "rawValue"]
+- ["SQ", "stringValue"]
+- !private ["SQ", "updatedAt"]
+- !private ["SQ", "url"]
+- ["SH", "=="]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "createdAt"]
+- ["SH", "debugDescription"]
+- ["SH", "description"]
+- !private ["SH", "email"]
+- !private ["SH", "favorite"]
+- !private ["SH", "firstName"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["SH", "id"]
+- ["SH", "init"]
+- ["SH", "intValue"]
+- !private ["SH", "lastName"]
+- !private ["SH", "phoneNumber"]
+- !private ["SH", "profilePic"]
+- ["SH", "rawValue"]
+- ["SH", "stringValue"]
+- !private ["SH", "updatedAt"]
+- !private ["SH", "url"]
+- !private ["s22KeyedDecodingContainerV", "decode"]
+- !private ["s30KeyedDecodingContainerProtocolP", "decode"]
+- !private ["s22KeyedEncodingContainerV", "encodeIfPresent"]
+- !private ["s30KeyedEncodingContainerProtocolP", "encodeIfPresent"]
+- ["SY", "=="]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "createdAt"]
+- ["SY", "debugDescription"]
+- ["SY", "description"]
+- !private ["SY", "email"]
+- !private ["SY", "favorite"]
+- !private ["SY", "firstName"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- !private ["SY", "id"]
+- ["SY", "init"]
+- ["SY", "intValue"]
+- !private ["SY", "lastName"]
+- !private ["SY", "phoneNumber"]
+- !private ["SY", "profilePic"]
+- ["SY", "rawValue"]
+- ["SY", "stringValue"]
+- !private ["SY", "updatedAt"]
+- !private ["SY", "url"]
+depends-nominal:
+- "s9CodingKeyP"
+- "11My_Contacts0B11APIResponseV10CodingKeysO"
+- "11My_Contacts0B11APIResponseV"
+- "11My_Contacts0B7SectionV"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- !private "s7DecoderP"
+- "SE"
+- !private "s7EncoderP"
+- "SQ"
+- "SH"
+- !private "s22KeyedDecodingContainerV"
+- !private "s30KeyedDecodingContainerProtocolP"
+- !private "s22KeyedEncodingContainerV"
+- !private "s30KeyedEncodingContainerProtocolP"
+- "SY"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/Kingfisher.swiftmodule/x86_64.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules/Reachability.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-umbrella.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/ReachabilitySwift-umbrella.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/module.modulemap"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "71c250f243ca8d6864a82ff5ca26d36f"

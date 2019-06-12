@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "5556244856e4b5ee6a61094480fb04de"
+build_time: [1560283960, 76727000]
+inputs:
+  "/Users/samarth/Desktop/My Contacts/My ContactsTests/My_ContactsTests.swift": [1560283959, 761290453]

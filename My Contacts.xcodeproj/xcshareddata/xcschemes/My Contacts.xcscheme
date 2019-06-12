@@ -49,6 +49,26 @@
                ReferencedContainer = "container:My Contacts.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D48FB07922B04162000D9A90"
+               BuildableName = "APICallingTests.xctest"
+               BlueprintName = "APICallingTests"
+               ReferencedContainer = "container:My Contacts.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D48FB08722B04245000D9A90"
+               BuildableName = "CreateContactViewControllerTests.xctest"
+               BlueprintName = "CreateContactViewControllerTests"
+               ReferencedContainer = "container:My Contacts.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

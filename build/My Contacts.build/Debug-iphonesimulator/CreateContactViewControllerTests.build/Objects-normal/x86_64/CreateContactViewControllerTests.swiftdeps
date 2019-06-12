@@ -1,0 +1,508 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CreateContactViewControllerTests"
+provides-nominal:
+- "32CreateContactViewControllerTestsAAC"
+provides-member:
+- ["32CreateContactViewControllerTestsAAC", ""]
+provides-dynamic-lookup:
+- "setUp"
+- "sut"
+- "tearDown"
+- "testContactCreation"
+- "testExample"
+- "testPerformanceExample"
+- "testvalidateDetails"
+depends-top-level:
+- !private "&&"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- !private "ContactsAPIResponse"
+- "CreateContactViewController"
+- "CreateContactViewControllerTests"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
+- !private "StringLiteralType"
+- !private "UIStoryboard"
+- !private "ValidationUtils"
+- !private "XCTAssertTrue"
+- "XCTestCase"
+depends-member:
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["s7CVarArgP", "ContactsAPIResponse"]
+- !private ["s7CVarArgP", "UIStoryboard"]
+- !private ["s7CVarArgP", "ValidationUtils"]
+- !private ["s7CVarArgP", "XCTAssertTrue"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "emailId"]
+- !private ["s7CVarArgP", "firstName"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "insertUpdateContact"]
+- !private ["s7CVarArgP", "instantiateViewController"]
+- !private ["s7CVarArgP", "lastName"]
+- !private ["s7CVarArgP", "measure"]
+- !private ["s7CVarArgP", "mobileNum"]
+- !private ["s7CVarArgP", "sut"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "view"]
+- !private ["11My_Contacts0B11APIResponseV", "init"]
+- !private ["11My_Contacts27CreateContactViewControllerC", "emailId"]
+- !private ["11My_Contacts27CreateContactViewControllerC", "firstName"]
+- !private ["11My_Contacts27CreateContactViewControllerC", "insertUpdateContact"]
+- !private ["11My_Contacts27CreateContactViewControllerC", "lastName"]
+- !private ["11My_Contacts27CreateContactViewControllerC", "mobileNum"]
+- !private ["11My_Contacts27CreateContactViewControllerC", "view"]
+- !private ["32CreateContactViewControllerTestsAAC", "ContactsAPIResponse"]
+- ["32CreateContactViewControllerTestsAAC", "CreateContactViewController"]
+- !private ["32CreateContactViewControllerTestsAAC", "UIStoryboard"]
+- !private ["32CreateContactViewControllerTestsAAC", "ValidationUtils"]
+- !private ["32CreateContactViewControllerTestsAAC", "XCTAssertTrue"]
+- ["32CreateContactViewControllerTestsAAC", "deinit"]
+- ["32CreateContactViewControllerTestsAAC", "init"]
+- !private ["32CreateContactViewControllerTestsAAC", "measure"]
+- ["32CreateContactViewControllerTestsAAC", "setUp"]
+- ["32CreateContactViewControllerTestsAAC", "sut"]
+- ["32CreateContactViewControllerTestsAAC", "tearDown"]
+- ["32CreateContactViewControllerTestsAAC", "testContactCreation"]
+- ["32CreateContactViewControllerTestsAAC", "testExample"]
+- ["32CreateContactViewControllerTestsAAC", "testPerformanceExample"]
+- ["32CreateContactViewControllerTestsAAC", "testvalidateDetails"]
+- !private ["s28CustomDebugStringConvertibleP", "ContactsAPIResponse"]
+- !private ["s28CustomDebugStringConvertibleP", "UIStoryboard"]
+- !private ["s28CustomDebugStringConvertibleP", "ValidationUtils"]
+- !private ["s28CustomDebugStringConvertibleP", "XCTAssertTrue"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "emailId"]
+- !private ["s28CustomDebugStringConvertibleP", "firstName"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "insertUpdateContact"]
+- !private ["s28CustomDebugStringConvertibleP", "instantiateViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "lastName"]
+- !private ["s28CustomDebugStringConvertibleP", "measure"]
+- !private ["s28CustomDebugStringConvertibleP", "mobileNum"]
+- !private ["s28CustomDebugStringConvertibleP", "sut"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "view"]
+- !private ["s17CustomReflectableP", "emailId"]
+- !private ["s17CustomReflectableP", "firstName"]
+- !private ["s17CustomReflectableP", "insertUpdateContact"]
+- !private ["s17CustomReflectableP", "lastName"]
+- !private ["s17CustomReflectableP", "mobileNum"]
+- !private ["s17CustomReflectableP", "text"]
+- !private ["s17CustomReflectableP", "view"]
+- !private ["s23CustomStringConvertibleP", "ContactsAPIResponse"]
+- !private ["s23CustomStringConvertibleP", "UIStoryboard"]
+- !private ["s23CustomStringConvertibleP", "ValidationUtils"]
+- !private ["s23CustomStringConvertibleP", "XCTAssertTrue"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "emailId"]
+- !private ["s23CustomStringConvertibleP", "firstName"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "insertUpdateContact"]
+- !private ["s23CustomStringConvertibleP", "instantiateViewController"]
+- !private ["s23CustomStringConvertibleP", "lastName"]
+- !private ["s23CustomStringConvertibleP", "measure"]
+- !private ["s23CustomStringConvertibleP", "mobileNum"]
+- !private ["s23CustomStringConvertibleP", "sut"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "view"]
+- !private ["Se", "emailId"]
+- !private ["Se", "firstName"]
+- !private ["Se", "init"]
+- !private ["Se", "insertUpdateContact"]
+- !private ["Se", "lastName"]
+- !private ["Se", "mobileNum"]
+- !private ["Se", "text"]
+- !private ["Se", "view"]
+- !private ["SE", "emailId"]
+- !private ["SE", "firstName"]
+- !private ["SE", "init"]
+- !private ["SE", "insertUpdateContact"]
+- !private ["SE", "lastName"]
+- !private ["SE", "mobileNum"]
+- !private ["SE", "text"]
+- !private ["SE", "view"]
+- !private ["SQ", "ContactsAPIResponse"]
+- !private ["SQ", "UIStoryboard"]
+- !private ["SQ", "ValidationUtils"]
+- !private ["SQ", "XCTAssertTrue"]
+- ["SQ", ""]
+- !private ["SQ", "emailId"]
+- !private ["SQ", "firstName"]
+- !private ["SQ", "init"]
+- !private ["SQ", "insertUpdateContact"]
+- !private ["SQ", "instantiateViewController"]
+- !private ["SQ", "lastName"]
+- !private ["SQ", "measure"]
+- !private ["SQ", "mobileNum"]
+- !private ["SQ", "sut"]
+- !private ["SQ", "text"]
+- !private ["SQ", "view"]
+- !private ["s23ExpressibleByNilLiteralP", "emailId"]
+- !private ["s23ExpressibleByNilLiteralP", "firstName"]
+- !private ["s23ExpressibleByNilLiteralP", "insertUpdateContact"]
+- !private ["s23ExpressibleByNilLiteralP", "lastName"]
+- !private ["s23ExpressibleByNilLiteralP", "mobileNum"]
+- !private ["s23ExpressibleByNilLiteralP", "text"]
+- !private ["s23ExpressibleByNilLiteralP", "view"]
+- !private ["SH", "ContactsAPIResponse"]
+- !private ["SH", "UIStoryboard"]
+- !private ["SH", "ValidationUtils"]
+- !private ["SH", "XCTAssertTrue"]
+- ["SH", ""]
+- !private ["SH", "emailId"]
+- !private ["SH", "firstName"]
+- !private ["SH", "init"]
+- !private ["SH", "insertUpdateContact"]
+- !private ["SH", "instantiateViewController"]
+- !private ["SH", "lastName"]
+- !private ["SH", "measure"]
+- !private ["SH", "mobileNum"]
+- !private ["SH", "sut"]
+- !private ["SH", "text"]
+- !private ["SH", "view"]
+- !private ["So8NSCodingP", "emailId"]
+- !private ["So8NSCodingP", "firstName"]
+- !private ["So8NSCodingP", "insertUpdateContact"]
+- !private ["So8NSCodingP", "lastName"]
+- !private ["So8NSCodingP", "mobileNum"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "view"]
+- !private ["So26NSExtensionRequestHandlingP", "emailId"]
+- !private ["So26NSExtensionRequestHandlingP", "firstName"]
+- !private ["So26NSExtensionRequestHandlingP", "insertUpdateContact"]
+- !private ["So26NSExtensionRequestHandlingP", "lastName"]
+- !private ["So26NSExtensionRequestHandlingP", "mobileNum"]
+- !private ["So26NSExtensionRequestHandlingP", "view"]
+- !private ["So8NSObjectC", "ContactsAPIResponse"]
+- ["So8NSObjectC", "CreateContactViewController"]
+- !private ["So8NSObjectC", "UIStoryboard"]
+- !private ["So8NSObjectC", "ValidationUtils"]
+- !private ["So8NSObjectC", "XCTAssertTrue"]
+- !private ["So8NSObjectC", "emailId"]
+- !private ["So8NSObjectC", "firstName"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "insertUpdateContact"]
+- !private ["So8NSObjectC", "instantiateViewController"]
+- !private ["So8NSObjectC", "lastName"]
+- !private ["So8NSObjectC", "measure"]
+- !private ["So8NSObjectC", "mobileNum"]
+- ["So8NSObjectC", "setUp"]
+- ["So8NSObjectC", "sut"]
+- ["So8NSObjectC", "tearDown"]
+- ["So8NSObjectC", "testContactCreation"]
+- ["So8NSObjectC", "testExample"]
+- ["So8NSObjectC", "testPerformanceExample"]
+- ["So8NSObjectC", "testvalidateDetails"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "view"]
+- !private ["So8NSObjectP", "ContactsAPIResponse"]
+- !private ["So8NSObjectP", "UIStoryboard"]
+- !private ["So8NSObjectP", "ValidationUtils"]
+- !private ["So8NSObjectP", "XCTAssertTrue"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "emailId"]
+- !private ["So8NSObjectP", "firstName"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "insertUpdateContact"]
+- !private ["So8NSObjectP", "instantiateViewController"]
+- !private ["So8NSObjectP", "lastName"]
+- !private ["So8NSObjectP", "measure"]
+- !private ["So8NSObjectP", "mobileNum"]
+- !private ["So8NSObjectP", "sut"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "view"]
+- !private ["Sq", "emailId"]
+- !private ["Sq", "firstName"]
+- !private ["Sq", "insertUpdateContact"]
+- !private ["Sq", "lastName"]
+- !private ["Sq", "mobileNum"]
+- !private ["Sq", "text"]
+- !private ["Sq", "view"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "emailId"]
+- !private ["So21UIAppearanceContainerP", "firstName"]
+- !private ["So21UIAppearanceContainerP", "insertUpdateContact"]
+- !private ["So21UIAppearanceContainerP", "lastName"]
+- !private ["So21UIAppearanceContainerP", "mobileNum"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "view"]
+- !private ["So18UIContentContainerP", "emailId"]
+- !private ["So18UIContentContainerP", "firstName"]
+- !private ["So18UIContentContainerP", "insertUpdateContact"]
+- !private ["So18UIContentContainerP", "lastName"]
+- !private ["So18UIContentContainerP", "mobileNum"]
+- !private ["So18UIContentContainerP", "view"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "text"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "emailId"]
+- !private ["So18UIFocusEnvironmentP", "firstName"]
+- !private ["So18UIFocusEnvironmentP", "insertUpdateContact"]
+- !private ["So18UIFocusEnvironmentP", "lastName"]
+- !private ["So18UIFocusEnvironmentP", "mobileNum"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "view"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So31UIImagePickerControllerDelegateP", "emailId"]
+- !private ["So31UIImagePickerControllerDelegateP", "firstName"]
+- !private ["So31UIImagePickerControllerDelegateP", "insertUpdateContact"]
+- !private ["So31UIImagePickerControllerDelegateP", "lastName"]
+- !private ["So31UIImagePickerControllerDelegateP", "mobileNum"]
+- !private ["So31UIImagePickerControllerDelegateP", "view"]
+- !private ["So10UIKeyInputP", "text"]
+- !private ["So30UINavigationControllerDelegateP", "emailId"]
+- !private ["So30UINavigationControllerDelegateP", "firstName"]
+- !private ["So30UINavigationControllerDelegateP", "insertUpdateContact"]
+- !private ["So30UINavigationControllerDelegateP", "lastName"]
+- !private ["So30UINavigationControllerDelegateP", "mobileNum"]
+- !private ["So30UINavigationControllerDelegateP", "view"]
+- !private ["So30UIPasteConfigurationSupportingP", "emailId"]
+- !private ["So30UIPasteConfigurationSupportingP", "firstName"]
+- !private ["So30UIPasteConfigurationSupportingP", "insertUpdateContact"]
+- !private ["So30UIPasteConfigurationSupportingP", "lastName"]
+- !private ["So30UIPasteConfigurationSupportingP", "mobileNum"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "view"]
+- !private ["So11UIResponderC", "emailId"]
+- !private ["So11UIResponderC", "firstName"]
+- !private ["So11UIResponderC", "insertUpdateContact"]
+- !private ["So11UIResponderC", "lastName"]
+- !private ["So11UIResponderC", "mobileNum"]
+- !private ["So11UIResponderC", "text"]
+- !private ["So11UIResponderC", "view"]
+- !private ["So30UIResponderStandardEditActionsP", "emailId"]
+- !private ["So30UIResponderStandardEditActionsP", "firstName"]
+- !private ["So30UIResponderStandardEditActionsP", "insertUpdateContact"]
+- !private ["So30UIResponderStandardEditActionsP", "lastName"]
+- !private ["So30UIResponderStandardEditActionsP", "mobileNum"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "view"]
+- !private ["So16UIStateRestoringP", "emailId"]
+- !private ["So16UIStateRestoringP", "firstName"]
+- !private ["So16UIStateRestoringP", "insertUpdateContact"]
+- !private ["So16UIStateRestoringP", "lastName"]
+- !private ["So16UIStateRestoringP", "mobileNum"]
+- !private ["So16UIStateRestoringP", "view"]
+- !private ["So12UIStoryboardC", "init"]
+- !private ["So12UIStoryboardC", "instantiateViewController"]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextFieldC", "text"]
+- !private ["So19UITextFieldDelegateP", "emailId"]
+- !private ["So19UITextFieldDelegateP", "firstName"]
+- !private ["So19UITextFieldDelegateP", "insertUpdateContact"]
+- !private ["So19UITextFieldDelegateP", "lastName"]
+- !private ["So19UITextFieldDelegateP", "mobileNum"]
+- !private ["So19UITextFieldDelegateP", "view"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So18UITraitEnvironmentP", "emailId"]
+- !private ["So18UITraitEnvironmentP", "firstName"]
+- !private ["So18UITraitEnvironmentP", "insertUpdateContact"]
+- !private ["So18UITraitEnvironmentP", "lastName"]
+- !private ["So18UITraitEnvironmentP", "mobileNum"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "view"]
+- !private ["So23UIUserActivityRestoringP", "emailId"]
+- !private ["So23UIUserActivityRestoringP", "firstName"]
+- !private ["So23UIUserActivityRestoringP", "insertUpdateContact"]
+- !private ["So23UIUserActivityRestoringP", "lastName"]
+- !private ["So23UIUserActivityRestoringP", "mobileNum"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "view"]
+- !private ["So6UIViewC", "text"]
+- !private ["So16UIViewControllerC", "emailId"]
+- !private ["So16UIViewControllerC", "firstName"]
+- !private ["So16UIViewControllerC", "insertUpdateContact"]
+- !private ["So16UIViewControllerC", "lastName"]
+- !private ["So16UIViewControllerC", "mobileNum"]
+- !private ["So16UIViewControllerC", "view"]
+- !private ["11My_Contacts15ValidationUtilsC", "isValidEmail"]
+- !private ["11My_Contacts15ValidationUtilsC", "isValidMobile"]
+- !private ["So11XCTActivityP", "ContactsAPIResponse"]
+- !private ["So11XCTActivityP", "UIStoryboard"]
+- !private ["So11XCTActivityP", "ValidationUtils"]
+- !private ["So11XCTActivityP", "XCTAssertTrue"]
+- ["So11XCTActivityP", ""]
+- !private ["So11XCTActivityP", "init"]
+- !private ["So11XCTActivityP", "measure"]
+- !private ["So11XCTActivityP", "sut"]
+- !private ["So17XCTWaiterDelegateP", "ContactsAPIResponse"]
+- !private ["So17XCTWaiterDelegateP", "UIStoryboard"]
+- !private ["So17XCTWaiterDelegateP", "ValidationUtils"]
+- !private ["So17XCTWaiterDelegateP", "XCTAssertTrue"]
+- ["So17XCTWaiterDelegateP", ""]
+- !private ["So17XCTWaiterDelegateP", "init"]
+- !private ["So17XCTWaiterDelegateP", "measure"]
+- !private ["So17XCTWaiterDelegateP", "sut"]
+- !private ["So6XCTestC", "ContactsAPIResponse"]
+- ["So6XCTestC", "CreateContactViewController"]
+- !private ["So6XCTestC", "UIStoryboard"]
+- !private ["So6XCTestC", "ValidationUtils"]
+- !private ["So6XCTestC", "XCTAssertTrue"]
+- ["So6XCTestC", "init"]
+- !private ["So6XCTestC", "measure"]
+- ["So6XCTestC", "setUp"]
+- ["So6XCTestC", "sut"]
+- ["So6XCTestC", "tearDown"]
+- ["So6XCTestC", "testContactCreation"]
+- ["So6XCTestC", "testExample"]
+- ["So6XCTestC", "testPerformanceExample"]
+- ["So6XCTestC", "testvalidateDetails"]
+- !private ["So10XCTestCaseC", "ContactsAPIResponse"]
+- ["So10XCTestCaseC", "CreateContactViewController"]
+- !private ["So10XCTestCaseC", "UIStoryboard"]
+- !private ["So10XCTestCaseC", "ValidationUtils"]
+- !private ["So10XCTestCaseC", "XCTAssertTrue"]
+- ["So10XCTestCaseC", ""]
+- ["So10XCTestCaseC", "init"]
+- !private ["So10XCTestCaseC", "measure"]
+- ["So10XCTestCaseC", "setUp"]
+- ["So10XCTestCaseC", "sut"]
+- ["So10XCTestCaseC", "tearDown"]
+- ["So10XCTestCaseC", "testContactCreation"]
+- ["So10XCTestCaseC", "testExample"]
+- ["So10XCTestCaseC", "testPerformanceExample"]
+- ["So10XCTestCaseC", "testvalidateDetails"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ContactsAPIResponse"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIStoryboard"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "ValidationUtils"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "XCTAssertTrue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "emailId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "firstName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "insertUpdateContact"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "instantiateViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "lastName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "measure"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "mobileNum"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sut"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
+- !private ["s21_ObjectiveCBridgeableP", "emailId"]
+- !private ["s21_ObjectiveCBridgeableP", "firstName"]
+- !private ["s21_ObjectiveCBridgeableP", "insertUpdateContact"]
+- !private ["s21_ObjectiveCBridgeableP", "lastName"]
+- !private ["s21_ObjectiveCBridgeableP", "mobileNum"]
+- !private ["s21_ObjectiveCBridgeableP", "text"]
+- !private ["s21_ObjectiveCBridgeableP", "view"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
+depends-nominal:
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "11My_Contacts0B11APIResponseV"
+- !private "11My_Contacts27CreateContactViewControllerC"
+- "32CreateContactViewControllerTestsAAC"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- "SQ"
+- !private "s23ExpressibleByNilLiteralP"
+- "SH"
+- !private "So8NSCodingP"
+- !private "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "Sq"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So31UIImagePickerControllerDelegateP"
+- !private "So10UIKeyInputP"
+- !private "So30UINavigationControllerDelegateP"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So16UIStateRestoringP"
+- !private "So12UIStoryboardC"
+- !private "So15UITextDraggableP"
+- !private "So15UITextDroppableP"
+- !private "So11UITextFieldC"
+- !private "So19UITextFieldDelegateP"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So6UIViewC"
+- !private "So16UIViewControllerC"
+- !private "11My_Contacts15ValidationUtilsC"
+- "So11XCTActivityP"
+- "So17XCTWaiterDelegateP"
+- "So6XCTestC"
+- "So10XCTestCaseC"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/Kingfisher.swiftmodule/x86_64.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/My_Contacts.swiftmodule/x86_64.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules/Reachability.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/XCTest.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-umbrella.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/ReachabilitySwift-umbrella.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Modules/module.modulemap"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "4bc6526d4147b7508e3a921692e585d9"

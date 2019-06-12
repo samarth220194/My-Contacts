@@ -68,10 +68,10 @@ class ContactsListViewController: UIViewController {
     
     var networkManager: NetworkManager!
     var coreDataStack : CoreDataStack!
-    var contacts : [Contact] = []
-    var loader = UIView()
-    var contactsDictionary = [String : [ContactsAPIResponse]]()
-    var contactTitles = [String]()
+    var contacts : [Contact] = [] // To fetch all contacts from database
+    var loader = UIView() // Loader for API
+    var contactsDictionary = [String : [ContactsAPIResponse]]() // To group the api response into dictionary
+    var contactTitles = [String]() // Array for  header of all the sections
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,15 +105,13 @@ class ContactsListViewController: UIViewController {
             }
         }
     }
-    
-    
+
     func getContactsFromServer()
     {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {return}
             self.loader.isHidden = false
         }
-        networkManager = NetworkManager()
         networkManager.getContacts(){ data,error in
             if error == nil {
                 self.parseData(data)
@@ -256,6 +254,7 @@ class ContactsListViewController: UIViewController {
     }
     func getSectionedData(contacts : [ContactsAPIResponse])
     {
+        // grouping the api response into a dictionary (Eg. : ["A" :["Amit","Akshay","Anil"],"B" : ["Bat","Ball","Booo"]])
         let sortedContacts = contacts.sorted(by: {(c1 : ContactsAPIResponse,c2 : ContactsAPIResponse) -> Bool in
             return (c1.firstName ?? "").localizedCaseInsensitiveCompare(c2.firstName ?? "") == ComparisonResult.orderedAscending
         })
@@ -272,6 +271,7 @@ class ContactsListViewController: UIViewController {
     
     func saveContacts(contactList : [ContactsAPIResponse])
     {
+        // insert the contacts in database for offline access
         let dispatchQueue = DispatchQueue(label: "SavingContactsQueue", qos: .background)
         dispatchQueue.async {
             self.coreDataStack.deleteAllContacts {
@@ -281,6 +281,7 @@ class ContactsListViewController: UIViewController {
     }
     func getOfflineContacts(contacts : [Contact])
     {
+        // fetching offline contacts and showing them
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {return}
             self.loader.isHidden = true
@@ -297,6 +298,7 @@ class ContactsListViewController: UIViewController {
     }
     
     @IBAction func addNewContact(_ sender: Any) {
+        // Navigate to add new contact
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "createContact")
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -314,7 +316,6 @@ extension ContactsListViewController : UITableViewDelegate
         return uiview
     }
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        
         return self.contactTitles
     }
     

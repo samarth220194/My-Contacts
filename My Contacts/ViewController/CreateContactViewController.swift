@@ -22,9 +22,9 @@ class CreateContactViewController: UIViewController,UINavigationControllerDelega
     var loader = UIView()
     var contactDetail : ContactsAPIResponse?
     var networkManager: NetworkManager!
-    var contactImageUrl : String?
+    var contactImageUrl : String? // for saving the picked image in this variable
     var coreDataStack : CoreDataStack!
-    var updateDetailDelegate : UpdateDetailsDelegate?
+    var updateDetailDelegate : UpdateDetailsDelegate? // for communicating between ContactDetail controller and ContactCreateController (to pass data)
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -185,7 +185,6 @@ class CreateContactViewController: UIViewController,UINavigationControllerDelega
         }
         
     }
-    
     @objc func keyboardDidShow()
     {
         self.view.frame = CGRect(x: 0, y: -150, width: self.view.frame.width, height: self.view.frame.height)

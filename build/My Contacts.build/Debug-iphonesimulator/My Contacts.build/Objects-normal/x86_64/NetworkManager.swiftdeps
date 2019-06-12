@@ -1,0 +1,222 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "NetworkResponse"
+- "Result"
+- "NetworkManager"
+provides-nominal:
+- "11My_Contacts15NetworkResponseO"
+- "11My_Contacts6ResultO"
+- "11My_Contacts14NetworkManagerV"
+provides-member:
+- ["11My_Contacts15NetworkResponseO", ""]
+- ["11My_Contacts6ResultO", ""]
+- ["11My_Contacts14NetworkManagerV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "..."
+- "=="
+- "CastingPrecedence"
+- "ContactsApi"
+- "Data"
+- "Error"
+- "HTTPURLResponse"
+- "Int"
+- "NetworkEnvironment"
+- "NetworkManager"
+- "NetworkResponse"
+- "Result"
+- "Router"
+- "String"
+- "URLResponse"
+- !private "_findStringSwitchCase"
+- !private "~="
+depends-member:
+- !private ["s7CVarArgP", "statusCode"]
+- !private ["11My_Contacts0B3ApiO", "createContact"]
+- ["11My_Contacts0B3ApiO", "deinit"]
+- !private ["11My_Contacts0B3ApiO", "detailContact"]
+- !private ["11My_Contacts0B3ApiO", "listContact"]
+- !private ["11My_Contacts0B3ApiO", "updateContact"]
+- !private ["s28CustomDebugStringConvertibleP", "statusCode"]
+- !private ["s23CustomStringConvertibleP", "statusCode"]
+- !private ["11My_Contacts12EndPointTypeP", "createContact"]
+- !private ["11My_Contacts12EndPointTypeP", "detailContact"]
+- !private ["11My_Contacts12EndPointTypeP", "listContact"]
+- !private ["11My_Contacts12EndPointTypeP", "updateContact"]
+- ["SQ", "=="]
+- ["SQ", "RawValue"]
+- ["SQ", ""]
+- ["SQ", "_Default_RawValue"]
+- !private ["SQ", "_findStringSwitchCase"]
+- ["SQ", "_rawHashValue"]
+- !private ["SQ", "authenticationError"]
+- !private ["SQ", "badRequest"]
+- !private ["SQ", "failed"]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["SQ", "init"]
+- !private ["SQ", "noData"]
+- !private ["SQ", "outdated"]
+- ["SQ", "production"]
+- ["SQ", "rawValue"]
+- !private ["SQ", "statusCode"]
+- !private ["So17NSHTTPURLResponseC", "statusCode"]
+- ["SH", "=="]
+- ["SH", "RawValue"]
+- ["SH", ""]
+- ["SH", "_Default_RawValue"]
+- !private ["SH", "_findStringSwitchCase"]
+- ["SH", "_rawHashValue"]
+- !private ["SH", "authenticationError"]
+- !private ["SH", "badRequest"]
+- !private ["SH", "failed"]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- ["SH", "init"]
+- !private ["SH", "noData"]
+- !private ["SH", "outdated"]
+- ["SH", "production"]
+- ["SH", "rawValue"]
+- !private ["SH", "statusCode"]
+- !private ["So8NSCodingP", "statusCode"]
+- !private ["So9NSCopyingP", "statusCode"]
+- !private ["So8NSObjectC", "statusCode"]
+- !private ["So8NSObjectP", "statusCode"]
+- !private ["So14NSSecureCodingP", "statusCode"]
+- ["11My_Contacts18NetworkEnvironmentO", "production"]
+- ["11My_Contacts14NetworkManagerV", "ContactsApi"]
+- ["11My_Contacts14NetworkManagerV", "Data"]
+- ["11My_Contacts14NetworkManagerV", "Error"]
+- ["11My_Contacts14NetworkManagerV", "HTTPURLResponse"]
+- ["11My_Contacts14NetworkManagerV", "Int"]
+- ["11My_Contacts14NetworkManagerV", "NetworkEnvironment"]
+- !private ["11My_Contacts14NetworkManagerV", "NetworkResponse"]
+- ["11My_Contacts14NetworkManagerV", "Result"]
+- ["11My_Contacts14NetworkManagerV", "Router"]
+- ["11My_Contacts14NetworkManagerV", "String"]
+- ["11My_Contacts14NetworkManagerV", "URLResponse"]
+- ["11My_Contacts14NetworkManagerV", "createContact"]
+- ["11My_Contacts14NetworkManagerV", "environment"]
+- ["11My_Contacts14NetworkManagerV", "getContactDetails"]
+- ["11My_Contacts14NetworkManagerV", "getContacts"]
+- ["11My_Contacts14NetworkManagerV", "handleData"]
+- !private ["11My_Contacts14NetworkManagerV", "handleNetworkResponse"]
+- ["11My_Contacts14NetworkManagerV", "init"]
+- ["11My_Contacts14NetworkManagerV", "router"]
+- ["11My_Contacts14NetworkManagerV", "updateContact"]
+- ["11My_Contacts15NetworkResponseO", "=="]
+- ["11My_Contacts15NetworkResponseO", "RawValue"]
+- ["11My_Contacts15NetworkResponseO", "_Default_RawValue"]
+- !private ["11My_Contacts15NetworkResponseO", "_findStringSwitchCase"]
+- ["11My_Contacts15NetworkResponseO", "_rawHashValue"]
+- ["11My_Contacts15NetworkResponseO", "authenticationError"]
+- ["11My_Contacts15NetworkResponseO", "badRequest"]
+- ["11My_Contacts15NetworkResponseO", "deinit"]
+- ["11My_Contacts15NetworkResponseO", "failed"]
+- ["11My_Contacts15NetworkResponseO", "hash"]
+- ["11My_Contacts15NetworkResponseO", "hashValue"]
+- ["11My_Contacts15NetworkResponseO", "init"]
+- ["11My_Contacts15NetworkResponseO", "noData"]
+- ["11My_Contacts15NetworkResponseO", "outdated"]
+- ["11My_Contacts15NetworkResponseO", "rawValue"]
+- ["11My_Contacts15NetworkResponseO", "success"]
+- ["11My_Contacts15NetworkResponseO", "unableToDecode"]
+- ["11My_Contacts13NetworkRouterP", "init"]
+- !private ["11My_Contacts13NetworkRouterP", "request"]
+- ["SY", "=="]
+- ["SY", "RawValue"]
+- ["SY", ""]
+- ["SY", "_Default_RawValue"]
+- !private ["SY", "_findStringSwitchCase"]
+- ["SY", "_rawHashValue"]
+- !private ["SY", "authenticationError"]
+- !private ["SY", "badRequest"]
+- !private ["SY", "failed"]
+- ["SY", "hash"]
+- ["SY", "hashValue"]
+- ["SY", "init"]
+- !private ["SY", "noData"]
+- !private ["SY", "outdated"]
+- ["SY", "rawValue"]
+- ["11My_Contacts6ResultO", "failure"]
+- ["11My_Contacts6ResultO", "success"]
+- !private ["11My_Contacts6RouterC", "deinit"]
+- ["11My_Contacts6RouterC", "init"]
+- !private ["11My_Contacts6RouterC", "request"]
+- !private ["So13NSURLResponseC", "statusCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "statusCode"]
+depends-nominal:
+- !private "s7CVarArgP"
+- "11My_Contacts0B3ApiO"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s23CustomStringConvertibleP"
+- !private "11My_Contacts12EndPointTypeP"
+- "SQ"
+- !private "So17NSHTTPURLResponseC"
+- "SH"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- "11My_Contacts18NetworkEnvironmentO"
+- "11My_Contacts14NetworkManagerV"
+- "11My_Contacts15NetworkResponseO"
+- "11My_Contacts13NetworkRouterP"
+- "SY"
+- "11My_Contacts6ResultO"
+- "11My_Contacts6RouterC"
+- !private "So13NSURLResponseC"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/Kingfisher.swiftmodule/x86_64.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules/Reachability.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-umbrella.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/ReachabilitySwift-umbrella.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Headers/Kingfisher-Swift.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Headers/Reachability-Swift.h"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/Kingfisher/Kingfisher.framework/Modules/module.modulemap"
+- "/Users/samarth/Desktop/My Contacts/build/Debug-iphonesimulator/ReachabilitySwift/Reachability.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/os.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "f2577f2a53d8d52784cd0e004159e660"

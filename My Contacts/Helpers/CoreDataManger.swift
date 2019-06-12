@@ -18,48 +18,31 @@ final class CoreDataStack {
     init(modelName: String) {
         self.modelName = modelName
     }
-    
-    private func setupNotificationHandling() {
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(saveChanges), name: UIApplication.willTerminateNotification, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(saveChanges), name: UIApplication.didEnterBackgroundNotification, object: nil)
-    }
-
-    private(set) lazy var managedObjectContext: NSManagedObjectContext = {
+    public lazy var managedObjectContext: NSManagedObjectContext = {
         let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-       
         managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator
-        
-//        managedObjectContext.parent = self.privateManagedObjectContext
-        
         return managedObjectContext
     }()
     
-    private lazy var privateManagedObjectContext: NSManagedObjectContext = {
+    public lazy var privateManagedObjectContext: NSManagedObjectContext = {
         var managedObjectContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        
-        // Configure Managed Object Context
-//        managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator
-        
         managedObjectContext.parent = self.managedObjectContext
         
         return managedObjectContext
     }()
     
     
-    private lazy var managedObjectModel: NSManagedObjectModel = {
+    public lazy var managedObjectModel: NSManagedObjectModel = {
         guard let modelURL = Bundle.main.url(forResource: self.modelName, withExtension: "momd") else {
             fatalError("Unable to Find Data Model")
         }
-        
         guard let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
             fatalError("Unable to Load Data Model")
         }
-        
         return managedObjectModel
     }()
     
-    private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+    public lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         
         let fileManager = FileManager.default
@@ -70,9 +53,6 @@ final class CoreDataStack {
         let persistentStoreURL = documentsDirectoryURL.appendingPathComponent(storeName)
         
         do {
-//            let options = [ NSInferMappingModelAutomaticallyOption : true,
-//                            NSMigratePersistentStoresAutomaticallyOption : true]
-//
             try coordinator.addPersistentStore(ofType: NSSQLiteStoreType,
                                                               configurationName: nil,
                                                               at: persistentStoreURL,
@@ -109,7 +89,7 @@ final class CoreDataStack {
             }
             else
             {
-                 print("parent context not saved")
+                 print("parent context not saved as there are no changes")
             }
         }
     }

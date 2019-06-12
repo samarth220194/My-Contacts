@@ -58,6 +58,7 @@ class ValidationUtils{
 
 class Utils {
     
+    // generates a random number with given number of digits
     func generateRandomNumber(numDigits : Int) -> Int32{
         var place : Int32 = 1
         var finalNumber : Int32 = 0;
@@ -69,7 +70,7 @@ class Utils {
         }
         return finalNumber
     }
-    
+    // saves the image into local directory
     func saveImage(imageName: String,image : UIImage,complition : @escaping(String?)->())
     {
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
@@ -85,6 +86,8 @@ class Utils {
             complition(nil)
         }
     }
+    
+    // gets the saved image url
     func getImageUrl(imageName : String) -> String?
     {
         let fileManager = FileManager.default
@@ -95,7 +98,7 @@ class Utils {
             return nil
         }
     }
-
+    // gets local directory path
     func getDirectoryPath() -> String {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]

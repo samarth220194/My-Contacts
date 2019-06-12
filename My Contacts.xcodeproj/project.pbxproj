@@ -33,6 +33,8 @@
 		D432BD4B22AC1D0D00AAD12F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD4A22AC1D0D00AAD12F /* Constants.swift */; };
 		D432BD4D22AC2E9C00AAD12F /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD4C22AC2E9C00AAD12F /* ContactDetailViewController.swift */; };
 		D432BD4F22AC492500AAD12F /* CreateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BD4E22AC492500AAD12F /* CreateContactViewController.swift */; };
+		D48FB07D22B04162000D9A90 /* APICallingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FB07C22B04162000D9A90 /* APICallingTests.swift */; };
+		D48FB08B22B04245000D9A90 /* CreateContactViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FB08A22B04245000D9A90 /* CreateContactViewControllerTests.swift */; };
 		D4D1C08722AD219B00DB3E3F /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1C08622AD219B00DB3E3F /* CoreDataManger.swift */; };
 		D4D1C08922AD848800DB3E3F /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1C08822AD848800DB3E3F /* NetworkConnection.swift */; };
 		E2E8592D79F97888E796D73F /* Pods_My_ContactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6B7AB322AB857A367F9C96 /* Pods_My_ContactsUITests.framework */; };
@@ -47,6 +49,20 @@
 			remoteInfo = "My Contacts";
 		};
 		D432BCFC22ABA54A00AAD12F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D432BCD122ABA54800AAD12F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D432BCD822ABA54800AAD12F;
+			remoteInfo = "My Contacts";
+		};
+		D48FB07F22B04162000D9A90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D432BCD122ABA54800AAD12F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D432BCD822ABA54800AAD12F;
+			remoteInfo = "My Contacts";
+		};
+		D48FB08D22B04245000D9A90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D432BCD122ABA54800AAD12F /* Project object */;
 			proxyType = 1;
@@ -92,6 +108,12 @@
 		D432BD4A22AC1D0D00AAD12F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D432BD4C22AC2E9C00AAD12F /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		D432BD4E22AC492500AAD12F /* CreateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactViewController.swift; sourceTree = "<group>"; };
+		D48FB07A22B04162000D9A90 /* APICallingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APICallingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48FB07C22B04162000D9A90 /* APICallingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallingTests.swift; sourceTree = "<group>"; };
+		D48FB07E22B04162000D9A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D48FB08822B04245000D9A90 /* CreateContactViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreateContactViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48FB08A22B04245000D9A90 /* CreateContactViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactViewControllerTests.swift; sourceTree = "<group>"; };
+		D48FB08C22B04245000D9A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4D1C08622AD219B00DB3E3F /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManger.swift; sourceTree = "<group>"; };
 		D4D1C08822AD848800DB3E3F /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		E35980BE86C37A2A5312AC2F /* Pods-My ContactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ContactsTests.release.xcconfig"; path = "Target Support Files/Pods-My ContactsTests/Pods-My ContactsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +143,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2E8592D79F97888E796D73F /* Pods_My_ContactsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48FB07722B04162000D9A90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48FB08522B04245000D9A90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +192,8 @@
 				D432BCDB22ABA54800AAD12F /* My Contacts */,
 				D432BCF322ABA54A00AAD12F /* My ContactsTests */,
 				D432BCFE22ABA54A00AAD12F /* My ContactsUITests */,
+				D48FB07B22B04162000D9A90 /* APICallingTests */,
+				D48FB08922B04245000D9A90 /* CreateContactViewControllerTests */,
 				D432BCDA22ABA54800AAD12F /* Products */,
 				135BAEF7C0D5C13DC8C33155 /* Pods */,
 				A3912EC549395DC6AB23B174 /* Frameworks */,
@@ -168,6 +206,8 @@
 				D432BCD922ABA54800AAD12F /* My Contacts.app */,
 				D432BCF022ABA54A00AAD12F /* My ContactsTests.xctest */,
 				D432BCFB22ABA54A00AAD12F /* My ContactsUITests.xctest */,
+				D48FB07A22B04162000D9A90 /* APICallingTests.xctest */,
+				D48FB08822B04245000D9A90 /* CreateContactViewControllerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +334,24 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		D48FB07B22B04162000D9A90 /* APICallingTests */ = {
+			isa = PBXGroup;
+			children = (
+				D48FB07C22B04162000D9A90 /* APICallingTests.swift */,
+				D48FB07E22B04162000D9A90 /* Info.plist */,
+			);
+			path = APICallingTests;
+			sourceTree = "<group>";
+		};
+		D48FB08922B04245000D9A90 /* CreateContactViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D48FB08A22B04245000D9A90 /* CreateContactViewControllerTests.swift */,
+				D48FB08C22B04245000D9A90 /* Info.plist */,
+			);
+			path = CreateContactViewControllerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -356,6 +414,42 @@
 			productReference = D432BCFB22ABA54A00AAD12F /* My ContactsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D48FB07922B04162000D9A90 /* APICallingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48FB08322B04162000D9A90 /* Build configuration list for PBXNativeTarget "APICallingTests" */;
+			buildPhases = (
+				D48FB07622B04162000D9A90 /* Sources */,
+				D48FB07722B04162000D9A90 /* Frameworks */,
+				D48FB07822B04162000D9A90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D48FB08022B04162000D9A90 /* PBXTargetDependency */,
+			);
+			name = APICallingTests;
+			productName = APICallingTests;
+			productReference = D48FB07A22B04162000D9A90 /* APICallingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D48FB08722B04245000D9A90 /* CreateContactViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D48FB08F22B04245000D9A90 /* Build configuration list for PBXNativeTarget "CreateContactViewControllerTests" */;
+			buildPhases = (
+				D48FB08422B04245000D9A90 /* Sources */,
+				D48FB08522B04245000D9A90 /* Frameworks */,
+				D48FB08622B04245000D9A90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D48FB08E22B04245000D9A90 /* PBXTargetDependency */,
+			);
+			name = CreateContactViewControllerTests;
+			productName = CreateContactViewControllerTests;
+			productReference = D48FB08822B04245000D9A90 /* CreateContactViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -377,6 +471,14 @@
 						CreatedOnToolsVersion = 10.2;
 						TestTargetID = D432BCD822ABA54800AAD12F;
 					};
+					D48FB07922B04162000D9A90 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = D432BCD822ABA54800AAD12F;
+					};
+					D48FB08722B04245000D9A90 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = D432BCD822ABA54800AAD12F;
+					};
 				};
 			};
 			buildConfigurationList = D432BCD422ABA54800AAD12F /* Build configuration list for PBXProject "My Contacts" */;
@@ -395,6 +497,8 @@
 				D432BCD822ABA54800AAD12F /* My Contacts */,
 				D432BCEF22ABA54A00AAD12F /* My ContactsTests */,
 				D432BCFA22ABA54A00AAD12F /* My ContactsUITests */,
+				D48FB07922B04162000D9A90 /* APICallingTests */,
+				D48FB08722B04245000D9A90 /* CreateContactViewControllerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -418,6 +522,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D432BCF922ABA54A00AAD12F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48FB07822B04162000D9A90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48FB08622B04245000D9A90 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -612,6 +730,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D48FB07622B04162000D9A90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48FB07D22B04162000D9A90 /* APICallingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D48FB08422B04245000D9A90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D48FB08B22B04245000D9A90 /* CreateContactViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -624,6 +758,16 @@
 			isa = PBXTargetDependency;
 			target = D432BCD822ABA54800AAD12F /* My Contacts */;
 			targetProxy = D432BCFC22ABA54A00AAD12F /* PBXContainerItemProxy */;
+		};
+		D48FB08022B04162000D9A90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D432BCD822ABA54800AAD12F /* My Contacts */;
+			targetProxy = D48FB07F22B04162000D9A90 /* PBXContainerItemProxy */;
+		};
+		D48FB08E22B04245000D9A90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D432BCD822ABA54800AAD12F /* My Contacts */;
+			targetProxy = D48FB08D22B04245000D9A90 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -887,6 +1031,90 @@
 			};
 			name = Release;
 		};
+		D48FB08122B04162000D9A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R39K4WE33;
+				INFOPLIST_FILE = APICallingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.samarth.APICallingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Contacts.app/My Contacts";
+			};
+			name = Debug;
+		};
+		D48FB08222B04162000D9A90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R39K4WE33;
+				INFOPLIST_FILE = APICallingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.samarth.APICallingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Contacts.app/My Contacts";
+			};
+			name = Release;
+		};
+		D48FB09022B04245000D9A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R39K4WE33;
+				INFOPLIST_FILE = CreateContactViewControllerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.samarth.CreateContactViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Contacts.app/My Contacts";
+			};
+			name = Debug;
+		};
+		D48FB09122B04245000D9A90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R39K4WE33;
+				INFOPLIST_FILE = CreateContactViewControllerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.samarth.CreateContactViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Contacts.app/My Contacts";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -922,6 +1150,24 @@
 			buildConfigurations = (
 				D432BD0B22ABA54A00AAD12F /* Debug */,
 				D432BD0C22ABA54A00AAD12F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48FB08322B04162000D9A90 /* Build configuration list for PBXNativeTarget "APICallingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48FB08122B04162000D9A90 /* Debug */,
+				D48FB08222B04162000D9A90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D48FB08F22B04245000D9A90 /* Build configuration list for PBXNativeTarget "CreateContactViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D48FB09022B04245000D9A90 /* Debug */,
+				D48FB09122B04245000D9A90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
